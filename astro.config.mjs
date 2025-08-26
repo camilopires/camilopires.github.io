@@ -6,6 +6,5 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   outDir: 'docs',
-  site: 'https://camilopires.github.io',
-  base: '/camilo-astro-site'
+  site: 'https://camilopires.github.io'
 });
