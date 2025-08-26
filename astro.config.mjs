@@ -6,5 +6,6 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   outDir: 'docs',
-  site: 'https://camilopires.github.io'
+  site: 'https://camilopires.github.io',
+  trailingSlash: 'always'
 });

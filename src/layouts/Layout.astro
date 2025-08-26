@@ -27,10 +27,10 @@ const { title, description = "Camilo Pires - Product Manager & App Developer" } 
       Skip to main content
     </a>
     
-    {MAINTENANCE_CONFIG.enabled && Astro.url.pathname !== '/maintenance' ? (
+    {MAINTENANCE_CONFIG.enabled && Astro.url.pathname !== '/maintenance/' ? (
       <script>
         // Redirect to maintenance page if maintenance mode is enabled
-        window.location.href = '/maintenance';
+        window.location.href = '/maintenance/';
       </script>
     ) : (
       <slot />
