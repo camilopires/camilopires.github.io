@@ -1,0 +1,242 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Projects - Camilo Pires" description="View Camilo Pires' portfolio of projects and applications">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">My Projects</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          A collection of projects that showcase my skills in product management and app development
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12">
+        
+        <!-- BoxingScorecard Project -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-br from-red-50 to-blue-50 p-8">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">BoxingScorecard</h2>
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium" aria-label="Featured project">Featured</span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              A professional mobile application for scoring boxing matches with real-time updates, 
+              comprehensive statistics, and official scoring criteria. Built with React Native for 
+              cross-platform compatibility.
+            </p>
+            
+            <div class="mb-6">
+              <h3 class="font-semibold text-gray-900 mb-3">Key Features:</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>• Professional boxing scoring system</li>
+                <li>• Real-time match updates</li>
+                <li>• Round-by-round statistics</li>
+                <li>• Fighter profiles and history</li>
+                <li>• Cross-device synchronization</li>
+                <li>• Offline functionality</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h3 class="font-semibold text-gray-900 mb-3">Technologies:</h3>
+              <ul class="flex flex-wrap gap-2" role="list" aria-label="Technologies used">
+                <li><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React Native</span></li>
+                <li><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">TypeScript</span></li>
+                <li><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Firebase</span></li>
+                <li><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Redux</span></li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/boxingscorecard" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+                View Details
+              </a>
+              <a href="/boxingscorecard" class="inline-block border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coming Soon Project -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">Project Coming Soon</h2>
+              <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium" aria-label="Project status: In Development">In Development</span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              An exciting new project is currently in development. This will showcase advanced 
+              product management skills and innovative technical solutions.
+            </p>
+            
+            <div class="mb-6">
+              <h3 class="font-semibold text-gray-900 mb-3">Expected Features:</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>• Advanced user experience design</li>
+                <li>• Scalable architecture</li>
+                <li>• Data-driven insights</li>
+                <li>• Performance optimization</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h3 class="font-semibold text-gray-900 mb-3">Technologies:</h3>
+              <ul class="flex flex-wrap gap-2" role="list" aria-label="Technologies to be determined">
+                <li><span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">TBD</span></li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <p class="text-gray-600 text-center">
+                Stay tuned for updates!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Another Coming Soon Project -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-br from-green-50 to-blue-50 p-8">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">Project Coming Soon</h2>
+              <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium" aria-label="Project status: Planning">Planning</span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              Another innovative project in the planning phase. This will demonstrate 
+              strategic product thinking and technical excellence.
+            </p>
+            
+            <div class="mb-6">
+              <h3 class="font-semibold text-gray-900 mb-3">Planned Features:</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>• Innovative solution design</li>
+                <li>• Market research integration</li>
+                <li>• User-centered approach</li>
+                <li>• Scalable technology stack</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h3 class="font-semibold text-gray-900 mb-3">Technologies:</h3>
+              <ul class="flex flex-wrap gap-2" role="list" aria-label="Technologies to be determined">
+                <li><span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">TBD</span></li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <p class="text-gray-600 text-center">
+                Coming soon!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Open Source Contributions -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-8">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">Open Source</h2>
+              <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" aria-label="Open source contributions">Contributions</span>
+            </div>
+            <p class="text-gray-600 mb-6">
+              Active contributor to the open source community, sharing knowledge and 
+              building tools that help other developers.
+            </p>
+            
+            <div class="mb-6">
+              <h3 class="font-semibold text-gray-900 mb-3">Areas of Contribution:</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>• React Native libraries</li>
+                <li>• Developer tools</li>
+                <li>• Documentation improvements</li>
+                <li>• Bug fixes and features</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h3 class="font-semibold text-gray-900 mb-3">Technologies:</h3>
+              <ul class="flex flex-wrap gap-2" role="list" aria-label="Open source technologies">
+                <li><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">React Native</span></li>
+                <li><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span></li>
+                <li><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">TypeScript</span></li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <p class="text-gray-600 text-center">
+                Always open to collaboration!
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Process Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">My Project Process</h2>
+      
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🔍</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Research</h3>
+          <p class="text-gray-600">Market analysis, user research, and competitive landscape evaluation</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">✏️</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Design</h3>
+          <p class="text-gray-600">User experience design, wireframing, and prototyping</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">⚙️</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Develop</h3>
+          <p class="text-gray-600">Agile development with regular testing and iteration</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🚀</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Launch</h3>
+          <p class="text-gray-600">Deployment, monitoring, and continuous improvement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Have a Project in Mind?</h2>
+      <p class="text-xl text-blue-100 mb-8">
+        I'm always interested in new opportunities and exciting projects.
+      </p>
+      <a href="/contact" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+        Let's Discuss
+      </a>
+    </div>
+  </section>
+</Layout>
