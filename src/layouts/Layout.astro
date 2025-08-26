@@ -1,4 +1,6 @@
 ---
+import { MAINTENANCE_CONFIG } from '../config/maintenance';
+
 export interface Props {
   title: string;
   description?: string;
@@ -24,7 +26,15 @@ const { title, description = "Camilo Pires - Product Manager & App Developer" } 
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
       Skip to main content
     </a>
-    <slot />
+    
+    {MAINTENANCE_CONFIG.enabled && Astro.url.pathname !== '/maintenance' ? (
+      <script>
+        // Redirect to maintenance page if maintenance mode is enabled
+        window.location.href = '/maintenance';
+      </script>
+    ) : (
+      <slot />
+    )}
   </body>
 </html>
 
