@@ -5,5 +5,6 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
-  site: 'https://camilo-astro-site.netlify.app',
+  site: 'https://camilopires.github.io',
+  base: '/camilo-astro-site',
 });
