@@ -5,6 +5,7 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
+  outDir: 'docs',
   site: 'https://camilopires.github.io',
   base: '/camilo-astro-site',
 });
