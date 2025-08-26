@@ -7,4 +7,8 @@ export default defineConfig({
   output: 'static',
   outDir: 'docs',
   site: 'https://camilopires.github.io',
+  base: '/camilo-astro-site',
+  build: {
+    assets: 'assets'
+  }
 });
