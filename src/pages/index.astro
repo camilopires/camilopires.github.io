@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 import { MAINTENANCE_CONFIG } from '../config/maintenance';
 ---
 
@@ -93,32 +94,16 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
         <div class="contact-info">
           <h3>Need to get in touch?</h3>
           <p>If you need to reach me urgently, you can:</p>
-          <p>📧 Email: <a href="mailto:{MAINTENANCE_CONFIG.contact.email}">{MAINTENANCE_CONFIG.contact.email}</a></p>
-          <p>💼 LinkedIn: <a href="{MAINTENANCE_CONFIG.contact.linkedin}" target="_blank">linkedin.com/in/camilopires</a></p>
+          <p>📧 Email: <a href={`mailto:${MAINTENANCE_CONFIG.contact.email}`}>{MAINTENANCE_CONFIG.contact.email}</a></p>
+          <p>💼 LinkedIn: <a href={MAINTENANCE_CONFIG.contact.linkedin} target="_blank" rel="noopener noreferrer">linkedin.com/in/camilopires</a></p>
         </div>
       </div>
     </body>
   </html>
 ) : (
   <Layout title="Camilo Pires - Product Manager & App Developer">
-    <main id="main-content">
-      <!-- Header -->
-      <header class="bg-white shadow-sm">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between h-16">
-            <div class="flex items-center">
-              <h1 class="text-xl font-semibold text-gray-900">Camilo</h1>
-            </div>
-            <div class="flex items-center space-x-8">
-              <a href="/" class="text-gray-900 hover:text-gray-600">Home</a>
-              <a href="/about/" class="text-gray-900 hover:text-gray-600">About</a>
-              <a href="/projects/" class="text-gray-900 hover:text-gray-600">Projects</a>
-              <a href="/blog/" class="text-gray-900 hover:text-gray-600">Blog</a>
-              <a href="/contact/" class="text-gray-900 hover:text-gray-600">Contact</a>
-            </div>
-          </div>
-        </nav>
-      </header>
+    <Header />
+    <main id="main-content" class="pt-8">
 
       <!-- Hero Section -->
       <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -139,7 +124,7 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
             <div>
               <h2 class="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
               <p class="text-lg text-gray-600 mb-6">
-                I'm a product manager and app developer with a passion for creating user-centered digital solutions. With expertise in both product strategy and technical implementation, I bridge the gap between business objectives and technical execution.
+                I'm a product manager and app developer with a passion for creating user-centred digital solutions. With expertise in both product strategy and technical implementation, I bridge the gap between business objectives and technical execution.
               </p>
               <p class="text-lg text-gray-600 mb-8">
                 My approach combines data-driven decision making with creative problem solving to deliver products that users love and businesses value.
@@ -159,7 +144,13 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
                 </div>
               </div>
             </div>
-            <div>
+            <div class="flex flex-col items-center">
+              <img 
+                src="/images/CP Headshot.jpg" 
+                alt="Camilo Pires - Product Manager and App Developer" 
+                class="w-64 h-64 object-cover rounded-full shadow-lg mb-6"
+                loading="lazy"
+              />
               <h3 class="text-2xl font-bold text-gray-900 mb-6">What I Do</h3>
               <ul class="space-y-4">
                 <li class="flex items-start">
@@ -168,7 +159,7 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
-                  <span class="text-gray-600">Cross-platform mobile app development</span>
+                  <span class="text-gray-600">iOS app development with Swift</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
@@ -176,11 +167,15 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
+                  <span class="text-gray-600">Accessibility consulting and user testing</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">✓</span>
                   <span class="text-gray-600">Agile project management</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
-                  <span class="text-gray-600">Data analysis and metrics optimization</span>
+                  <span class="text-gray-600">Data analysis and metrics optimisation</span>
                 </li>
               </ul>
             </div>
@@ -192,14 +187,14 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
       <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Featured Projects</h2>
-          <div class="grid md:grid-cols-3 gap-8">
+          <div class="grid md:grid-cols-2 gap-8">
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">BoxingScorecard</h3>
                 <p class="text-gray-600 mb-4">A mobile app for scoring boxing matches with real-time updates and professional scoring criteria.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React Native</span>
-                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Mobile App</span>
+                  <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">iOS</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Swift</span>
                   <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Sports</span>
                 </div>
                 <a href="/boxingscorecard/" class="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</a>
@@ -214,18 +209,6 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
                 </div>
               </div>
             </div>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="p-6">
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Project Coming Soon</h3>
-                <p class="text-gray-600 mb-4">More exciting projects are in development. Stay tuned for updates!</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">In Progress</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text-center mt-8">
-            <a href="/projects/" class="text-blue-600 hover:text-blue-800 font-semibold">View All Projects →</a>
           </div>
         </div>
       </section>
@@ -234,7 +217,7 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
       <section class="py-20 bg-blue-600 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
-          <p class="text-xl mb-8">I'm always interested in new opportunities and exciting projects.</p>
+          <p class="text-xl mb-8">I work full-time at Indeed but am happy to help out where I can. I'm always interested in new opportunities and exciting projects.</p>
           <a href="/contact/" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get In Touch</a>
         </div>
       </section>
