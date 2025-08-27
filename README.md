@@ -8,7 +8,7 @@ A beautiful, modern portfolio website built with Astro and Tailwind CSS.
 - **Fast Performance**: Built with Astro for optimal loading speeds
 - **Tailwind CSS**: Utility-first CSS framework for rapid styling
 - **TypeScript**: Type-safe development experience
-- **SEO Optimized**: Meta tags, Open Graph, and semantic HTML
+- **SEO Optimised**: Meta tags, Open Graph, and semantic HTML
 - **Mobile First**: Responsive design that works on all devices
 
 ## 🛠️ Tech Stack
@@ -67,9 +67,9 @@ A beautiful, modern portfolio website built with Astro and Tailwind CSS.
 
 ## 🎨 Customization
 
-The site uses a custom color palette defined in `tailwind.config.mjs`. You can easily customize:
+The site uses a custom colour palette defined in `tailwind.config.mjs`. You can easily customise:
 
-- **Colors**: Update the primary color palette
+- **Colours**: Update the primary colour palette
 - **Fonts**: Change the font family in the Tailwind config
 - **Content**: Update the content in the page files
 - **Components**: Modify or add new components in the components directory
