@@ -7,5 +7,8 @@ export default defineConfig({
   output: 'static',
   outDir: 'docs',
   site: 'https://camilopires.github.io',
-  trailingSlash: 'always'
+  trailingSlash: 'always',
+  build: {
+    assets: 'assets'
+  }
 });
