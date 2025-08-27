@@ -8,7 +8,7 @@ export const MAINTENANCE_CONFIG = {
   
   // Optional: Contact information to show during maintenance
   contact: {
-    email: "contact@camilopires.com",
+    email: "dev@camilopires.co.uk",
     linkedin: "https://linkedin.com/in/camilopires"
   }
 };
