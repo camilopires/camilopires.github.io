@@ -4,6 +4,8 @@ export interface Props {
   description?: string;
 }
 
+import '../styles/global.css';
+
 const { title, description = "Camilo Pires - Product Manager & App Developer" } = Astro.props;
 ---
 
@@ -27,35 +29,3 @@ const { title, description = "Camilo Pires - Product Manager & App Developer" } 
     <slot />
   </body>
 </html>
-
-<style is:global>
-  html {
-    font-family: system-ui, sans-serif;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Ensure focus is always visible */
-  *:focus {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
-  }
-
-  /* Hide focus outline for mouse users, show for keyboard users */
-  *:focus:not(:focus-visible) {
-    outline: none;
-  }
-
-  /* Ensure sufficient color contrast */
-  .text-gray-600 {
-    color: #4b5563;
-  }
-
-  .text-blue-100 {
-    color: #dbeafe;
-  }
-</style>

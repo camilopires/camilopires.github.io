@@ -8,7 +8,8 @@ export default defineConfig({
   outDir: 'docs',
   site: 'https://camilopires.github.io',
   trailingSlash: 'always',
+  base: '/',
   build: {
-    assets: 'assets'
+    assets: '_astro'
   }
 });
