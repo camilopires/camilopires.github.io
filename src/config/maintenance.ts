@@ -9,6 +9,6 @@ export const MAINTENANCE_CONFIG = {
   // Optional: Contact information to show during maintenance
   contact: {
     email: "dev@camilopires.co.uk",
-    linkedin: "https://www.linkedin.com/in/camilopires"
+    linkedin: "https://www.linkedin.com/in/camilo-pires"
   }
 };
