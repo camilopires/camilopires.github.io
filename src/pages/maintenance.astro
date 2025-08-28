@@ -34,6 +34,16 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
             padding: 2rem;
         }
         
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+        }
+        
         .maintenance-icon {
             font-size: 4rem;
             margin-bottom: 1rem;
@@ -84,6 +94,7 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
 </head>
 <body>
     <div class="maintenance-container">
+        <img src="/images/CP Headshot.jpg" alt="Camilo Pires" class="profile-image">
         <div class="maintenance-icon">🔧</div>
         <h1>Under Maintenance</h1>
         <p>

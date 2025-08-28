@@ -1,0 +1,149 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+---
+
+<Layout title="BoxingScorecard Project - Camilo Pires" description="Detailed case study of the BoxingScorecard mobile app, developed by Camilo Pires">
+  <Header />
+  
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-50 to-blue-50" aria-labelledby="project-hero-heading">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h1 id="project-hero-heading" class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+            BoxingScorecard
+          </h1>
+          <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            A professional iOS mobile application for scoring boxing matches with real-time updates and comprehensive statistics, designed for both enthusiasts and professionals.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <a href="https://apps.apple.com/us/app/boxingscorecard/id1234567890" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+              <span class="mr-2" aria-hidden="true">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
+                </svg>
+              </span>
+              View on App Store
+            </a>
+            <a href="/contact" 
+               class="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+              <span class="mr-2" aria-hidden="true">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.722-1.332L2 19l1.638-3.568A8.98 8.98 0 012 10c0-3.866 3.582-7 8-7s8 3.134 8 7z" clip-rule="evenodd"></path>
+                </svg>
+              </span>
+              Discuss Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">The Challenge & Solution</h2>
+          <p class="text-lg text-gray-600 mb-6">
+            The world of boxing needed a modern, reliable, and user-friendly platform for scoring matches. Traditional methods were often inconsistent or lacked the depth required by serious fans and judges. BoxingScorecard was developed to fill this gap, offering a robust solution that brings professional-level scoring to everyone's fingertips.
+          </p>
+          <p class="text-lg text-gray-600 mb-6">
+            My goal was to create an intuitive app that not only allowed users to score rounds in real-time but also provided detailed statistics, fighter profiles, and a seamless cross-device experience. This involved intricate UI/UX design, real-time data synchronization, and a focus on performance to ensure a smooth user experience even during live events.
+          </p>
+          <a href="/privacy#boxingscorecard-privacy" class="text-blue-600 hover:text-blue-800 font-semibold mt-4 block">
+            Read BoxingScorecard Privacy Policy →
+          </a>
+        </div>
+        <div>
+          <img src="/images/boxingscorecard-mockup.png" alt="BoxingScorecard App Mockup" class="rounded-lg shadow-xl" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Key Features</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-red-600 text-4xl mb-4" aria-hidden="true">🥊</div>
+            <h3 class="text-xl font-semibold mb-3">Professional Scoring</h3>
+            <p class="text-gray-600">Utilize official boxing scoring criteria with intuitive round-by-round tracking.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-blue-600 text-4xl mb-4" aria-hidden="true">⚡</div>
+            <h3 class="text-xl font-semibold mb-3">Real-time Updates</h3>
+            <p class="text-gray-600">Experience live scoring updates and instant synchronization across devices.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-green-600 text-4xl mb-4" aria-hidden="true">📊</div>
+            <h3 class="text-xl font-semibold mb-3">Comprehensive Statistics</h3>
+            <p class="text-gray-600">Dive into detailed match history, fighter analytics, and performance metrics.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-yellow-600 text-4xl mb-4" aria-hidden="true">👤</div>
+            <h3 class="text-xl font-semibold mb-3">Fighter Profiles</h3>
+            <p class="text-gray-600">Track favorite fighters, view their records, and analyze past performances.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-purple-600 text-4xl mb-4" aria-hidden="true">☁️</div>
+            <h3 class="text-xl font-semibold mb-3">Cloud Sync</h3>
+            <p class="text-gray-600">Securely backup and sync your scores and data across all your Apple devices.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-orange-600 text-4xl mb-4" aria-hidden="true">♿</div>
+            <h3 class="font-semibold text-gray-900 mb-3">Accessibility Focused</h3>
+            <p class="text-gray-600">Designed with accessibility in mind, ensuring an inclusive experience for all users.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Technologies Used</h2>
+        <div class="flex flex-wrap justify-center gap-4" role="list" aria-label="Technologies used in BoxingScorecard">
+          <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-md" role="listitem">iOS Swift</span>
+          <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-md" role="listitem">Xcode</span>
+          <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-md" role="listitem">Firebase (Firestore, Authentication)</span>
+          <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full text-md" role="listitem">Core Data</span>
+          <span class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-md" role="listitem">SwiftUI</span>
+          <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-md" role="listitem">REST APIs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600 text-white text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Ready to Experience BoxingScorecard?</h2>
+        <p class="text-xl text-blue-100 mb-8">
+          Download the app today and elevate your boxing experience with professional scoring and insights.
+        </p>
+        <a href="https://apps.apple.com/us/app/boxingscorecard/id1234567890" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
+          <span class="mr-2" aria-hidden="true">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
+            </svg>
+          </span>
+          Get the App Now!
+        </a>
+      </div>
+    </section>
+
+    <!-- Back to Projects -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <a href="/projects/" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded">
+          <span aria-hidden="true">←</span> Back to All Projects
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

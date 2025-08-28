@@ -7,7 +7,6 @@ export default defineConfig({
   output: 'static',
   outDir: 'docs',
   site: 'https://camilopires.co.uk',
-  trailingSlash: 'always',
   base: '/',
   build: {
     assets: '_astro'
