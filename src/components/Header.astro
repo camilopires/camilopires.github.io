@@ -5,6 +5,15 @@ const navItems = [
   { name: 'Projects', href: '/projects/' },
   { name: 'Contact', href: '/contact/' },
 ];
+
+// Get current path to determine active nav item
+const currentPath = Astro.url.pathname;
+const isActive = (href: string) => {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath.startsWith(href);
+};
 ---
 
 <header class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
@@ -24,10 +33,18 @@ const navItems = [
             {navItems.map((item) => (
               <a
                 href={item.href}
-                class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+                class={`px-3 py-2 text-sm font-medium transition-colors duration-200 relative group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded ${
+                  isActive(item.href) 
+                    ? 'text-blue-600' 
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
               >
                 {item.name}
-                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+                <span class={`absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform transition-transform duration-200 ${
+                  isActive(item.href) 
+                    ? 'scale-x-100' 
+                    : 'scale-x-0 group-hover:scale-x-100'
+                }`}></span>
               </a>
             ))}
           </div>
@@ -56,7 +73,11 @@ const navItems = [
         {navItems.map((item) => (
           <a
             href={item.href}
-            class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+            class={`block px-3 py-2 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded ${
+              isActive(item.href) 
+                ? 'text-blue-600 bg-blue-50' 
+                : 'text-gray-700 hover:text-blue-600'
+            }`}
           >
             {item.name}
           </a>
