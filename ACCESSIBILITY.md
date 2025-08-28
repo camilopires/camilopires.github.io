@@ -145,7 +145,7 @@ This portfolio site has been designed and developed with accessibility in mind, 
 ## 📞 Support
 
 For accessibility-related issues or questions:
-- Email: accessibility@camilopires.com
+- Email: accessibility@camilopires.co.uk
 - Include specific details about the issue
 - Provide steps to reproduce the problem
 
