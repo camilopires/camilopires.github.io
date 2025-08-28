@@ -24,7 +24,7 @@ import Header from '../components/Header.astro';
       <div class="grid lg:grid-cols-2 gap-12">
         
         <!-- BoxingScorecard Project -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <article class="bg-white rounded-lg shadow-lg overflow-hidden">
           <div class="bg-gradient-to-br from-red-50 to-blue-50 p-8">
             <div class="flex items-center justify-between mb-6">
               <h2 class="text-2xl font-bold text-gray-900">BoxingScorecard</h2>
@@ -59,15 +59,15 @@ import Header from '../components/Header.astro';
             </div>
 
             <div class="flex justify-center">
-              <a href="/projects/boxingscorecard" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+              <button onclick="window.location.href='/projects/boxingscorecard'" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center" aria-label="View BoxingScorecard project details">
                 View Details
-              </a>
+              </button>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- Coming Soon Project -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <article class="bg-white rounded-lg shadow-lg overflow-hidden">
           <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8">
             <div class="flex items-center justify-between mb-6">
               <h2 class="text-2xl font-bold text-gray-900">Project Coming Soon</h2>
@@ -101,7 +101,7 @@ import Header from '../components/Header.astro';
               </p>
             </div>
           </div>
-        </div>
+        </article>
 
 
 
@@ -115,51 +115,51 @@ import Header from '../components/Header.astro';
       <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">My Project Process</h2>
       
       <div class="grid md:grid-cols-4 gap-8">
-        <div class="text-center">
+        <article class="text-center">
           <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">🔍</span>
           </div>
           <h3 class="text-xl font-semibold mb-3">Research</h3>
           <p class="text-gray-600">Market analysis, user research, and competitive landscape evaluation</p>
-        </div>
+        </article>
         
-        <div class="text-center">
+        <article class="text-center">
           <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">✏️</span>
           </div>
           <h3 class="text-xl font-semibold mb-3">Design</h3>
           <p class="text-gray-600">User experience design, wireframing, and prototyping</p>
-        </div>
+        </article>
         
-        <div class="text-center">
+        <article class="text-center">
           <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">⚙️</span>
           </div>
           <h3 class="text-xl font-semibold mb-3">Develop</h3>
           <p class="text-gray-600">Agile development with regular testing and iteration</p>
-        </div>
+        </article>
         
-        <div class="text-center">
+        <article class="text-center">
           <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">🚀</span>
           </div>
           <h3 class="text-xl font-semibold mb-3">Launch</h3>
           <p class="text-gray-600">Deployment, monitoring, and continuous improvement</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Contact CTA -->
-  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
+  <aside class="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-white mb-4">Have a Project in Mind?</h2>
       <p class="text-xl text-blue-100 mb-8">
         I'm always interested in new opportunities and exciting projects.
       </p>
-      <a href="/contact" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+      <button onclick="window.location.href='/contact'" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
         Let's Discuss
-      </a>
+      </button>
     </div>
-  </section>
+  </aside>
 </Layout>

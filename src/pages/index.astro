@@ -17,8 +17,8 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
           <h1 class="text-4xl md:text-6xl font-bold mb-6">Hi, I'm Camilo Pires</h1>
           <p class="text-xl md:text-2xl mb-8">Product Manager & App Developer passionate about creating impactful digital experiences</p>
           <div class="space-x-4">
-            <a href="/projects/" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">View My Work</a>
-            <a href="/contact/" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Get In Touch</a>
+            <button onclick="window.location.href='/projects/'" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">View My Work</button>
+            <button onclick="window.location.href='/contact/'" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Get In Touch</button>
           </div>
         </div>
       </section>
@@ -37,16 +37,20 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
               </p>
               <div class="grid grid-cols-2 gap-4">
                 <div class="text-center p-4 bg-gray-50 rounded-lg">
-                  <h3 class="font-semibold text-gray-900">Product Management</h3>
+                  <h2 class="font-semibold text-gray-900 text-lg">Product Management</h2>
+                  <p class="text-sm text-gray-700 mt-2">Strategy, roadmap, and stakeholder management</p>
                 </div>
                 <div class="text-center p-4 bg-gray-50 rounded-lg">
-                  <h3 class="font-semibold text-gray-900">App Development</h3>
+                  <h2 class="font-semibold text-gray-900 text-lg">App Development</h2>
+                  <p class="text-sm text-gray-700 mt-2">iOS development with Swift and modern frameworks</p>
                 </div>
                 <div class="text-center p-4 bg-gray-50 rounded-lg">
-                  <h3 class="font-semibold text-gray-900">User Experience</h3>
+                  <h2 class="font-semibold text-gray-900 text-lg">User Experience</h2>
+                  <p class="text-sm text-gray-700 mt-2">Research, design, and accessibility consulting</p>
                 </div>
                 <div class="text-center p-4 bg-gray-50 rounded-lg">
-                  <h3 class="font-semibold text-gray-900">Data Analysis</h3>
+                  <h2 class="font-semibold text-gray-900 text-lg">Data Analysis</h2>
+                  <p class="text-sm text-gray-700 mt-2">Metrics, A/B testing, and performance optimization</p>
                 </div>
               </div>
             </div>
@@ -56,32 +60,36 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
                 alt="Camilo Pires - Product Manager and App Developer" 
                 class="w-64 h-64 object-cover rounded-full shadow-lg mb-6"
                 loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
               />
+              <div class="w-64 h-64 bg-gray-200 rounded-full shadow-lg mb-6 flex items-center justify-center hidden" style="display: none;">
+                <span class="text-gray-500 text-sm">Profile Image</span>
+              </div>
               <h3 class="text-2xl font-bold text-gray-900 mb-6">What I Do</h3>
               <ul class="space-y-4">
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
-                  <span class="text-gray-600">Product strategy and roadmap development</span>
+                  <span class="text-gray-700">Product strategy and roadmap development</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
-                  <span class="text-gray-600">iOS app development with Swift</span>
+                  <span class="text-gray-700">iOS app development with Swift</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
-                  <span class="text-gray-600">User research and UX design</span>
+                  <span class="text-gray-700">User research and UX design</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
-                  <span class="text-gray-600">Accessibility consulting and user testing</span>
+                  <span class="text-gray-700">Accessibility consulting and user testing</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
-                  <span class="text-gray-600">Agile project management</span>
+                  <span class="text-gray-700">Agile project management</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
-                  <span class="text-gray-600">Data analysis and metrics optimisation</span>
+                  <span class="text-gray-700">Data analysis and metrics optimisation</span>
                 </li>
               </ul>
             </div>
@@ -94,7 +102,7 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Featured Projects</h2>
           <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <article class="bg-white rounded-lg shadow-md overflow-hidden">
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">BoxingScorecard</h3>
                 <p class="text-gray-600 mb-4">A mobile app for scoring boxing matches with real-time updates and professional scoring criteria.</p>
@@ -105,8 +113,8 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
                 </div>
                 <a href="/projects/boxingscorecard" class="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</a>
               </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden">
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">Project Coming Soon</h3>
                 <p class="text-gray-600 mb-4">More exciting projects are in development. Stay tuned for updates!</p>
@@ -114,19 +122,19 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
                   <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">In Progress</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       <!-- CTA Section -->
-      <section class="py-20 bg-blue-600 text-white">
+      <aside class="py-20 bg-blue-600 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
           <p class="text-xl mb-8">I work full-time at Indeed but am happy to help out where I can. I'm always interested in new opportunities and exciting projects.</p>
-          <a href="/contact/" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get In Touch</a>
+          <button onclick="window.location.href='/contact/'" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get In Touch</button>
         </div>
-      </section>
+      </aside>
     </main>
   </Layout>
 )}

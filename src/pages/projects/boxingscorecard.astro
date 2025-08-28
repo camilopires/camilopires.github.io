@@ -18,7 +18,7 @@ import Header from '../../components/Header.astro';
             A professional iOS mobile application for scoring boxing matches with real-time updates and comprehensive statistics, designed for both enthusiasts and professionals.
           </p>
           <div class="flex flex-wrap justify-center gap-4 mb-8">
-            <a href="https://apps.apple.com/us/app/boxingscorecard/id1234567890" target="_blank" rel="noopener noreferrer" 
+            <button onclick="window.open('https://apps.apple.com/us/app/boxingscorecard/id1234567890', '_blank')" 
                class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
               <span class="mr-2" aria-hidden="true">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -27,8 +27,8 @@ import Header from '../../components/Header.astro';
                 </svg>
               </span>
               View on App Store
-            </a>
-            <a href="/contact" 
+            </button>
+            <button onclick="window.location.href='/contact'" 
                class="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
               <span class="mr-2" aria-hidden="true">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -36,7 +36,7 @@ import Header from '../../components/Header.astro';
                 </svg>
               </span>
               Discuss Project
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -58,7 +58,13 @@ import Header from '../../components/Header.astro';
           </a>
         </div>
         <div>
-          <img src="/images/boxingscorecard-mockup.png" alt="BoxingScorecard App Mockup" class="rounded-lg shadow-xl" loading="lazy">
+          <div class="bg-gray-200 rounded-lg shadow-xl h-64 flex items-center justify-center" aria-label="BoxingScorecard App Mockup Placeholder">
+            <div class="text-center">
+              <div class="text-4xl mb-2" aria-hidden="true">📱</div>
+              <p class="text-gray-500 text-lg">App Mockup Coming Soon</p>
+              <p class="text-gray-400 text-sm mt-1">Visual representation of the app interface</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -124,7 +130,7 @@ import Header from '../../components/Header.astro';
         <p class="text-xl text-blue-100 mb-8">
           Download the app today and elevate your boxing experience with professional scoring and insights.
         </p>
-        <a href="https://apps.apple.com/us/app/boxingscorecard/id1234567890" target="_blank" rel="noopener noreferrer" 
+        <button onclick="window.open('https://apps.apple.com/us/app/boxingscorecard/id1234567890', '_blank')" 
            class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
           <span class="mr-2" aria-hidden="true">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -133,7 +139,7 @@ import Header from '../../components/Header.astro';
             </svg>
           </span>
           Get the App Now!
-        </a>
+        </button>
       </div>
     </section>
 
