@@ -1,7 +1,7 @@
 // Maintenance mode configuration
 export const MAINTENANCE_CONFIG = {
   // Set to true to enable maintenance mode (disabled in development)
-  enabled: true,
+  enabled: false,
   
   // Optional: Add a message that will be shown on the maintenance page
   message: "I'm currently updating my website to bring you an even better experience. Please check back soon!",
