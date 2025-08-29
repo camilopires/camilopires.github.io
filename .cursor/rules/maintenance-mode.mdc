@@ -1,0 +1,4 @@
+---
+description: When I ask to turn on or enable maintenance mode, always use the maintenance script
+alwaysApply: false
+---
