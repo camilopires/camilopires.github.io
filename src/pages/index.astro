@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import { Image } from 'astro:assets';
 import { MAINTENANCE_CONFIG } from '../config/maintenance';
 import headshotImage from '../assets/CP Headshot.jpg';
+import appLogo from '../assets/BoxingScorecard/AppLogo.png';
 ---
 
 {MAINTENANCE_CONFIG.enabled ? (
@@ -113,7 +114,20 @@ import headshotImage from '../assets/CP Headshot.jpg';
           <div class="grid md:grid-cols-2 gap-8">
             <article class="bg-white rounded-lg shadow-md overflow-hidden">
               <div class="p-6">
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">BoxingScorecard</h3>
+                <div class="flex items-center mb-4">
+                  <Image 
+                    src={appLogo} 
+                    alt="BoxingScorecard App Icon" 
+                    width={48}
+                    height={48}
+                    class="w-12 h-12 rounded-xl mr-4"
+                    loading="lazy"
+                    sizes="48px"
+                    quality={90}
+                    format="webp"
+                  />
+                  <h3 class="text-xl font-semibold text-gray-900">BoxingScorecard</h3>
+                </div>
                 <p class="text-gray-600 mb-4">A professional iOS app for scoring boxing matches with real-time round tracking and comprehensive fight statistics.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200 shadow-sm">iOS</span>
