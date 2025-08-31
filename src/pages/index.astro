@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import OptimizedImage from '../components/OptimizedImage.astro';
+import { Image } from 'astro:assets';
 import { MAINTENANCE_CONFIG } from '../config/maintenance';
+import headshotImage from '../assets/CP Headshot.jpg';
 ---
 
 {MAINTENANCE_CONFIG.enabled ? (
@@ -62,15 +63,16 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
               </div>
             </div>
             <div class="flex flex-col items-center">
-              <OptimizedImage 
-                src="/images/CP Headshot.jpg" 
+              <Image 
+                src={headshotImage} 
                 alt="Camilo Pires - Product Manager and App Developer" 
-                width={256}
-                height={256}
+                width={512}
+                height={512}
                 class="w-64 h-64 object-cover rounded-full shadow-lg mb-6"
                 loading="eager"
-                sizes="256px"
-                quality={90}
+                sizes="(max-width: 768px) 256px, 512px"
+                quality={95}
+                format="webp"
               />
               <h3 class="text-2xl font-bold text-gray-900 mb-6">What I Do</h3>
               <ul class="space-y-4">
