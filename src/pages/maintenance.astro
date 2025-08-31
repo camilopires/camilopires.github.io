@@ -1,5 +1,7 @@
 ---
 import { MAINTENANCE_CONFIG } from '../config/maintenance';
+import { Image } from 'astro:assets';
+import headshotImage from '../assets/CP Headshot.jpg';
 ---
 
 <!DOCTYPE html>
@@ -95,7 +97,7 @@ import { MAINTENANCE_CONFIG } from '../config/maintenance';
 </head>
 <body>
     <div class="maintenance-container">
-        <img src="/images/CP Headshot.jpg" alt="Camilo Pires" class="profile-image">
+        <Image src={headshotImage} alt="Camilo Pires" class="profile-image" width={120} height={120} loading="eager" quality={95} format="webp">
         <div class="maintenance-icon">🔧</div>
         <h1>Under Maintenance</h1>
         <p>
