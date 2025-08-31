@@ -99,6 +99,14 @@ const cleanStructuredData = JSON.parse(JSON.stringify(structuredData));
     <!-- Canonical URL -->
     <link rel="canonical" href={canonical} />
     
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.linkedin.com" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/images/CP Headshot.jpg" as="image" type="image/jpeg" />
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonical} />

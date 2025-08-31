@@ -22,6 +22,18 @@ export default defineConfig({
   vite: {
     define: {
       'import.meta.env.DEV_MAINTENANCE': JSON.stringify(process.env.DEV_MAINTENANCE)
+    },
+    build: {
+      // Optimize CSS
+      cssMinify: true,
+      // Optimize assets
+      assetsInlineLimit: 4096, // Inline small assets
+      rollupOptions: {
+        output: {
+          // Optimize chunk splitting
+          manualChunks: undefined
+        }
+      }
     }
   }
 });
