@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import OptimizedImage from '../components/OptimizedImage.astro';
 ---
 
-<Layout title="About - Camilo Pires" description="Learn more about Camilo Pires, Product Manager and App Developer">
+<Layout 
+  title="About - Camilo Pires | Product Manager & App Developer"
+  description="Learn more about Camilo Pires, a Product Manager and App Developer with expertise in iOS development, UX design, and accessibility consulting. Discover his background, skills, and experience."
+  image="/images/CP Headshot.jpg"
+  type="profile"
+  tags={["Product Manager", "iOS Developer", "UX Designer", "Accessibility", "Swift", "SwiftUI", "Agile", "User Research"]}
+>
   <Header />
   
   <main id="main-content">
@@ -43,16 +50,16 @@ import Header from '../components/Header.astro';
             </p>
         </div>
         <div class="flex flex-col items-center">
-          <img 
+          <OptimizedImage 
             src="/images/CP Headshot.jpg" 
             alt="Camilo Pires - Product Manager and App Developer" 
+            width={256}
+            height={256}
             class="w-64 h-64 object-cover rounded-full shadow-lg mb-6"
-            loading="lazy"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            loading="eager"
+            sizes="256px"
+            quality={90}
           />
-          <div class="w-64 h-64 bg-gray-200 rounded-full shadow-lg mb-6 flex items-center justify-center hidden" style="display: none;">
-            <span class="text-gray-500 text-sm">Profile Image</span>
-          </div>
           <div class="bg-gray-100 rounded-lg p-8 w-full">
             <h3 class="text-xl font-semibold mb-6">Core Values</h3>
             <div class="space-y-4">
@@ -276,9 +283,9 @@ import Header from '../components/Header.astro';
       <p class="text-xl text-blue-100 mb-8">
         I'm always open to discussing new opportunities and exciting projects.
       </p>
-      <button onclick="window.location.href='/contact'" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" aria-label="Get in touch to discuss opportunities">
+      <a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" aria-label="Get in touch to discuss opportunities">
         Get In Touch
-      </button>
+      </a>
     </div>
   </section>
   </main>
