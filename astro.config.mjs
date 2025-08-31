@@ -18,5 +18,10 @@ export default defineConfig({
   base: '/',
   build: {
     assets: '_astro'
+  },
+  vite: {
+    define: {
+      'import.meta.env.DEV_MAINTENANCE': JSON.stringify(process.env.DEV_MAINTENANCE)
+    }
   }
 });

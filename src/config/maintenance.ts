@@ -1,7 +1,10 @@
 // Maintenance mode configuration
 export const MAINTENANCE_CONFIG = {
-  // Set to true to enable maintenance mode (disabled in development)
-  enabled: true,
+  // Set to true to enable maintenance mode (automatically disabled in development)
+  // Override with DEV_MAINTENANCE=true to show maintenance in dev mode
+  enabled: import.meta.env.DEV 
+    ? (import.meta.env.DEV_MAINTENANCE === 'true')
+    : true,
   
   // Optional: Add a message that will be shown on the maintenance page
   message: "I'm currently updating my website to bring you an even better experience. Please check back soon!",
