@@ -359,54 +359,59 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
       ];
       
       try {
-        // Initialize Swiper
+                // Initialize Swiper
         const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: false,
-        speed: 400,
-        effect: 'slide',
-        
-        // Enable autoplay (optional)
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: true,
-        },
-        
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        
-        // Pagination (dots)
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-          type: 'bullets',
-        },
-        
-        // Keyboard control
-        keyboard: {
-          enabled: true,
-          onlyInViewport: false,
-        },
-        
-        // Touch/swipe settings
-        touchRatio: 1,
-        touchAngle: 45,
-        simulateTouch: true,
-        
-        // Accessibility
-        a11y: {
-          prevSlideMessage: 'Previous screenshot',
-          nextSlideMessage: 'Next screenshot',
-          firstSlideMessage: 'This is the first screenshot',
-          lastSlideMessage: 'This is the last screenshot',
-        },
-        
-        // Events
-        on: {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: false,
+          speed: 400,
+          effect: 'slide',
+          
+          // Enable autoplay (optional)
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: true,
+          },
+          
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          
+          // Pagination (dots)
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            type: 'bullets',
+            renderBullet: function (index, className) {
+              return '<button class="' + className + '" aria-label="Go to slide ' + (index + 1) + '"></button>';
+            },
+          },
+          
+          // Keyboard control
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+          
+          // Touch/swipe settings
+          touchRatio: 1,
+          touchAngle: 45,
+          simulateTouch: true,
+          
+          // Enhanced Accessibility (Swiper native)
+          a11y: {
+            enabled: true,
+            prevSlideMessage: 'Previous screenshot',
+            nextSlideMessage: 'Next screenshot',
+            firstSlideMessage: 'This is the first screenshot',
+            lastSlideMessage: 'This is the last screenshot',
+            paginationBulletMessage: 'Go to screenshot {{index}}',
+          },
+          
+          // Events
+          on: {
           slideChange: function () {
             // Update caption when slide changes
             if (caption && captions[swiper.activeIndex]) {
@@ -459,34 +464,40 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
       background-color: rgb(37 99 235) !important; /* blue-600 */
     }
 
-    /* Navigation buttons */
+    /* Navigation buttons - Swiper handles accessibility */
     .swiper-button-next,
     .swiper-button-prev {
-      width: 40px !important;
-      height: 40px !important;
+      width: 48px !important;
+      height: 48px !important;
       margin-top: 0 !important;
-      background: rgba(255, 255, 255, 0.8) !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      border: 2px solid rgb(59 130 246) !important; /* blue-500 */
       border-radius: 50% !important;
-      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
-      color: rgb(31 41 55) !important; /* gray-800 */
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06) !important;
+      color: rgb(59 130 246) !important; /* blue-500 */
+      transition: all 0.2s ease-in-out !important;
     }
     
     .swiper-button-next:hover,
     .swiper-button-prev:hover {
-      background: rgba(255, 255, 255, 1) !important;
+      background: rgb(255, 255, 255) !important;
+      border-color: rgb(37 99 235) !important; /* blue-600 */
+      color: rgb(37 99 235) !important; /* blue-600 */
+      transform: scale(1.05) !important;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05) !important;
     }
     
     .swiper-button-next {
-      right: 8px !important;
+      right: 12px !important;
     }
     
     .swiper-button-prev {
-      left: 8px !important;
+      left: 12px !important;
     }
     
     .swiper-button-next::after,
     .swiper-button-prev::after {
-      font-size: 18px !important;
+      font-size: 20px !important;
       font-weight: bold !important;
     }
   </style>
