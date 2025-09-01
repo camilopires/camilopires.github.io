@@ -3,6 +3,12 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import { Image } from 'astro:assets';
 import appLogo from '../../assets/BoxingScorecard/AppLogo.png';
+import mockup1 from '../../assets/BoxingScorecard/AppMockups/1.png';
+import mockup2 from '../../assets/BoxingScorecard/AppMockups/2.png';
+import mockup3 from '../../assets/BoxingScorecard/AppMockups/3.png';
+import mockup4 from '../../assets/BoxingScorecard/AppMockups/4.png';
+import mockup5 from '../../assets/BoxingScorecard/AppMockups/5.png';
+import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
 ---
 
 <Layout title="BoxingScorecard Project - Camilo Pires" description="Professional iOS boxing scoring app with real-time updates, comprehensive statistics, and official 10-point must system">
@@ -84,103 +90,165 @@ import appLogo from '../../assets/BoxingScorecard/AppLogo.png';
           </a>
         </div>
         <div>
-          <!-- iPhone Frame with Image -->
-          <div class="relative mx-auto w-80 h-96">
-            <!-- iPhone Frame -->
-            <div class="relative w-full h-full">
-              <!-- iPhone Body -->
-              <div class="absolute inset-0 bg-gray-900 rounded-[3rem] shadow-2xl border-8 border-gray-800">
-                <!-- Notch -->
-                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
-                
-                <!-- Screen -->
-                <div class="absolute inset-2 bg-white rounded-[2.5rem] overflow-hidden">
-                  <!-- Status Bar -->
-                  <div class="absolute top-0 left-0 right-0 h-6 bg-white flex justify-between items-center px-6 text-xs font-semibold text-gray-900 z-20">
-                    <span>9:41</span>
-                    <div class="flex items-center space-x-1">
-                      <div class="w-4 h-2 bg-gray-900 rounded-sm"></div>
-                      <div class="w-1 h-2 bg-gray-900 rounded-sm"></div>
-                      <div class="w-1 h-2 bg-gray-900 rounded-sm"></div>
-                      <div class="w-1 h-2 bg-gray-900 rounded-sm"></div>
-                    </div>
-                  </div>
-                  
-                  <!-- App Content Area -->
-                  <div class="absolute top-6 left-0 right-0 bottom-0 bg-gradient-to-br from-red-50 to-blue-50">
-                    <!-- Placeholder for your app screenshot -->
-                    <div class="h-full flex items-center justify-center p-4">
-                      <div class="text-center">
-                        <div class="text-4xl mb-3" aria-hidden="true">🥊</div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">BoxingScorecard</h3>
-                        <p class="text-sm text-gray-600">Professional Scoring</p>
-                        <p class="text-xs text-gray-500 mt-1">10-point must system</p>
-                      </div>
-                    </div>
-                    
-                    <!-- Alternative: Replace the placeholder above with an actual image -->
-                    <!-- 
-                    <img 
-                      src="/images/boxingscorecard-screenshot.jpg" 
-                      alt="BoxingScorecard app screenshot showing the scoring interface"
-                      class="w-full h-full object-cover"
-                    />
-                    -->
-                  </div>
+          <!-- App Screenshots Carousel -->
+          <div class="relative mx-auto w-80">
+            <!-- Carousel Container -->
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <div id="carousel-container" class="flex transition-transform duration-300 ease-in-out">
+                <!-- Slide 1: Main Scoring Interface -->
+                <div class="w-80 flex-shrink-0">
+                  <Image 
+                    src={mockup1} 
+                    alt="BoxingScorecard main scoring interface showing round-by-round scoring with the 10-point must system"
+                    width={320}
+                    height={640}
+                    class="w-full h-auto"
+                    loading="eager"
+                    sizes="320px"
+                    quality={90}
+                    format="webp"
+                  />
                 </div>
                 
-                <!-- Home Indicator -->
-                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gray-600 rounded-full"></div>
+                <!-- Slide 2: Round Management -->
+                <div class="w-80 flex-shrink-0">
+                  <Image 
+                    src={mockup2} 
+                    alt="BoxingScorecard round management interface with real-time scoring updates and navigation"
+                    width={320}
+                    height={640}
+                    class="w-full h-auto"
+                    loading="lazy"
+                    sizes="320px"
+                    quality={90}
+                    format="webp"
+                  />
+                </div>
+                
+                <!-- Slide 3: Fight Statistics -->
+                <div class="w-80 flex-shrink-0">
+                  <Image 
+                    src={mockup3} 
+                    alt="BoxingScorecard comprehensive fight statistics and analytics dashboard"
+                    width={320}
+                    height={640}
+                    class="w-full h-auto"
+                    loading="lazy"
+                    sizes="320px"
+                    quality={90}
+                    format="webp"
+                  />
+                </div>
+                
+                <!-- Slide 4: Fighter Profiles -->
+                <div class="w-80 flex-shrink-0">
+                  <Image 
+                    src={mockup4} 
+                    alt="BoxingScorecard fighter profile management with detailed records and performance history"
+                    width={320}
+                    height={640}
+                    class="w-full h-auto"
+                    loading="lazy"
+                    sizes="320px"
+                    quality={90}
+                    format="webp"
+                  />
+                </div>
+                
+                <!-- Slide 5: Scorecard Generation -->
+                <div class="w-80 flex-shrink-0">
+                  <Image 
+                    src={mockup5} 
+                    alt="BoxingScorecard professional scorecard generation and sharing features"
+                    width={320}
+                    height={640}
+                    class="w-full h-auto"
+                    loading="lazy"
+                    sizes="320px"
+                    quality={90}
+                    format="webp"
+                  />
+                </div>
+                
+                <!-- Slide 6: Additional Feature -->
+                <div class="w-80 flex-shrink-0">
+                  <Image 
+                    src={mockup6} 
+                    alt="BoxingScorecard additional features and advanced functionality"
+                    width={320}
+                    height={640}
+                    class="w-full h-auto"
+                    loading="lazy"
+                    sizes="320px"
+                    quality={90}
+                    format="webp"
+                  />
+                </div>
               </div>
+              
+              <!-- Navigation Arrows -->
+              <button 
+                id="prev-btn" 
+                class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                aria-label="Previous screenshot"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+              </button>
+              
+              <button 
+                id="next-btn" 
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                aria-label="Next screenshot"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
             </div>
             
-            <!-- Reflection/Shadow Effect -->
-            <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-64 h-4 bg-black opacity-20 rounded-full blur-sm"></div>
+            <!-- Navigation Dots -->
+            <div class="flex justify-center space-x-2 mt-6">
+              <button 
+                class="dot w-3 h-3 rounded-full bg-blue-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-slide="0"
+                aria-label="Go to screenshot 1"
+              ></button>
+              <button 
+                class="dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-slide="1"
+                aria-label="Go to screenshot 2"
+              ></button>
+              <button 
+                class="dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-slide="2"
+                aria-label="Go to screenshot 3"
+              ></button>
+              <button 
+                class="dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-slide="3"
+                aria-label="Go to screenshot 4"
+              ></button>
+              <button 
+                class="dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-slide="4"
+                aria-label="Go to screenshot 5"
+              ></button>
+              <button 
+                class="dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-slide="5"
+                aria-label="Go to screenshot 6"
+              ></button>
+            </div>
+            
+            <!-- Caption -->
+            <div class="text-center mt-4">
+              <p id="carousel-caption" class="text-sm text-gray-600 font-medium">
+                Main Scoring Interface - Professional boxing scoring with the official 10-point must system
+              </p>
+            </div>
           </div>
-          
-          <!-- Optional: Add multiple iPhone frames for different screens -->
-          <!-- 
-          <div class="flex justify-center space-x-4 mt-8">
-            <div class="relative w-32 h-40">
-              <div class="absolute inset-0 bg-gray-900 rounded-[1.5rem] shadow-lg border-4 border-gray-800">
-                <div class="absolute inset-1 bg-white rounded-[1.25rem] overflow-hidden">
-                  <div class="h-full bg-gradient-to-br from-red-100 to-blue-100 flex items-center justify-center">
-                    <div class="text-center">
-                      <div class="text-2xl mb-1">🥊</div>
-                      <p class="text-xs text-gray-600">Round 1</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="relative w-32 h-40">
-              <div class="absolute inset-0 bg-gray-900 rounded-[1.5rem] shadow-lg border-4 border-gray-800">
-                <div class="absolute inset-1 bg-white rounded-[1.25rem] overflow-hidden">
-                  <div class="h-full bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
-                    <div class="text-center">
-                      <div class="text-2xl mb-1">📊</div>
-                      <p class="text-xs text-gray-600">Stats</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="relative w-32 h-40">
-              <div class="absolute inset-0 bg-gray-900 rounded-[1.5rem] shadow-lg border-4 border-gray-800">
-                <div class="absolute inset-1 bg-white rounded-[1.25rem] overflow-hidden">
-                  <div class="h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
-                    <div class="text-center">
-                      <div class="text-2xl mb-1">👤</div>
-                      <p class="text-xs text-gray-600">Fighters</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          -->
         </div>
       </div>
     </section>
@@ -314,4 +382,121 @@ import appLogo from '../../assets/BoxingScorecard/AppLogo.png';
       </div>
     </section>
   </main>
+
+  <script>
+    // Carousel functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.getElementById('carousel-container');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const dots = document.querySelectorAll('.dot');
+      const caption = document.getElementById('carousel-caption');
+      
+      // Check if all required elements exist
+      if (!container || !prevBtn || !nextBtn || !caption) {
+        console.error('Carousel elements not found');
+        return;
+      }
+      
+      let currentSlide = 0;
+      const totalSlides = 6;
+      
+      // Caption text for each slide
+      const captions = [
+        'Main Scoring Interface - Professional boxing scoring with the official 10-point must system',
+        'Round Management - Real-time scoring updates and seamless round navigation',
+        'Fight Statistics - Comprehensive analytics and performance metrics dashboard',
+        'Fighter Profiles - Detailed records and performance history management',
+        'Scorecard Generation - Professional scorecard creation and sharing features',
+        'Additional Features - Advanced functionality and enhanced user experience'
+      ];
+      
+      // Function to update carousel position
+      function updateCarousel() {
+        if (!container || !caption) return;
+        
+        const translateX = -currentSlide * 320; // 320px is the width of each slide
+        container.style.transform = `translateX(${translateX}px)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+          if (index === currentSlide) {
+            dot.classList.remove('bg-gray-300', 'hover:bg-gray-400');
+            dot.classList.add('bg-blue-600');
+          } else {
+            dot.classList.remove('bg-blue-600');
+            dot.classList.add('bg-gray-300', 'hover:bg-gray-400');
+          }
+        });
+        
+        // Update caption
+        caption.textContent = captions[currentSlide];
+      }
+      
+      // Next button click
+      nextBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+      });
+      
+      // Previous button click
+      prevBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      });
+      
+      // Dot navigation
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+          currentSlide = index;
+          updateCarousel();
+        });
+      });
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          updateCarousel();
+        } else if (e.key === 'ArrowRight') {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateCarousel();
+        }
+      });
+      
+      // Touch/swipe support for mobile
+      let startX = 0;
+      let endX = 0;
+      
+      if (container) {
+        container.addEventListener('touchstart', function(e) {
+          startX = e.touches[0].clientX;
+        });
+        
+        container.addEventListener('touchend', function(e) {
+          endX = e.changedTouches[0].clientX;
+          handleSwipe();
+        });
+      }
+      
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            // Swipe left - next slide
+            currentSlide = (currentSlide + 1) % totalSlides;
+          } else {
+            // Swipe right - previous slide
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          }
+          updateCarousel();
+        }
+      }
+      
+      // Initialize carousel
+      updateCarousel();
+    });
+  </script>
 </Layout>
