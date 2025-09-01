@@ -363,14 +363,16 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
         const swiper = new Swiper('.swiper', {
           // Optional parameters
           direction: 'horizontal',
-          loop: false,
-          speed: 400,
+          loop: true,
+          speed: 600,
           effect: 'slide',
           
-          // Enable autoplay (optional)
+          // Enable autoplay with continuous scrolling
           autoplay: {
-            delay: 5000,
-            disableOnInteraction: true,
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            waitForTransition: true,
           },
           
           // Navigation arrows
@@ -400,6 +402,10 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
           touchAngle: 45,
           simulateTouch: true,
           
+          // Smooth transitions
+          cssMode: false,
+          watchSlidesProgress: true,
+          
           // Enhanced Accessibility (Swiper native)
           a11y: {
             enabled: true,
@@ -412,23 +418,29 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
           
           // Events
           on: {
-          slideChange: function () {
-            // Update caption when slide changes
-            if (caption && captions[swiper.activeIndex]) {
-              caption.textContent = captions[swiper.activeIndex];
-            }
-          },
-          init: function () {
-            // Set initial caption
-            if (caption && captions[0]) {
-              caption.textContent = captions[0];
+            slideChange: function (swiperInstance) {
+              // Update caption when slide changes
+              if (caption && captions[swiperInstance.activeIndex]) {
+                caption.textContent = captions[swiperInstance.activeIndex];
+              }
+            },
+            init: function (swiperInstance) {
+              // Set initial caption
+              if (caption && captions[0]) {
+                caption.textContent = captions[0];
+              }
+              // Start autoplay
+              swiperInstance.autoplay.start();
+            },
+            beforeDestroy: function (swiperInstance) {
+              // Clean up autoplay
+              swiperInstance.autoplay.stop();
             }
           }
-        }
-      });
-      
-      console.log('🎉 Swiper carousel initialized successfully!');
-      
+        });
+        
+        console.log('🎉 Swiper carousel initialized successfully!');
+        
       } catch (error) {
         console.error('❌ Error initializing Swiper:', error);
       }
