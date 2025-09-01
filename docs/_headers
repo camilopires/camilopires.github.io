@@ -17,9 +17,9 @@
 *.js
   Cache-Control: public, max-age=31536000, immutable
 
-# Cache HTML pages for 1 hour (allows for content updates)
+# Cache HTML pages for 5 minutes (allows for quick content updates)
 /*.html
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=300, must-revalidate
 
 # Cache sitemap for 1 day
 /sitemap*.xml

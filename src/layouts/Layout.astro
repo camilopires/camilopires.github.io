@@ -94,6 +94,7 @@ const cleanStructuredData = JSON.parse(JSON.stringify(structuredData));
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="version" content={new Date().toISOString().split('T')[0]} />
     <title>{title}</title>
     
     <!-- Canonical URL -->
