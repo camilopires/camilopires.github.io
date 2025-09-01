@@ -200,6 +200,20 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
                 Main Scoring Interface - Professional boxing scoring with the official 10-point must system
               </p>
             </div>
+            
+            <!-- Accessibility Controls -->
+            <div class="flex justify-center items-center gap-4 mt-4">
+              <button 
+                id="autoplay-toggle" 
+                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                aria-label="Pause auto-scrolling carousel"
+                aria-pressed="true">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                </svg>
+                Pause Auto-scroll
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -359,7 +373,11 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
       ];
       
       try {
-                // Initialize Swiper
+        // Get accessibility controls
+        const autoplayToggle = document.getElementById('autoplay-toggle');
+        let isAutoplayActive = true;
+        
+        // Initialize Swiper
         const swiper = new Swiper('.swiper', {
           // Optional parameters
           direction: 'horizontal',
@@ -438,6 +456,49 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
             }
           }
         });
+        
+        // Handle accessibility controls
+        if (autoplayToggle) {
+          autoplayToggle.addEventListener('click', function() {
+            if (isAutoplayActive) {
+              // Pause autoplay
+              swiper.autoplay.stop();
+              isAutoplayActive = false;
+              autoplayToggle.innerHTML = `
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                Resume Auto-scroll
+              `;
+              autoplayToggle.setAttribute('aria-label', 'Resume auto-scrolling carousel');
+              autoplayToggle.setAttribute('aria-pressed', 'false');
+              autoplayToggle.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+              autoplayToggle.classList.add('bg-green-600', 'hover:bg-green-700');
+            } else {
+              // Resume autoplay
+              swiper.autoplay.start();
+              isAutoplayActive = true;
+              autoplayToggle.innerHTML = `
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                </svg>
+                Pause Auto-scroll
+              `;
+              autoplayToggle.setAttribute('aria-label', 'Pause auto-scrolling carousel');
+              autoplayToggle.setAttribute('aria-pressed', 'true');
+              autoplayToggle.classList.remove('bg-green-600', 'hover:bg-green-700');
+              autoplayToggle.classList.add('bg-blue-600', 'hover:bg-blue-700');
+            }
+          });
+          
+          // Keyboard accessibility
+          autoplayToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              autoplayToggle.click();
+            }
+          });
+        }
         
         console.log('🎉 Swiper carousel initialized successfully!');
         
