@@ -9,14 +9,7 @@ const __dirname = path.dirname(__filename);
 
 const configPath = path.join(__dirname, '../src/config/maintenance.ts');
 
-interface MaintenanceConfig {
-  enabled: boolean | string;
-  message: string;
-  contact: {
-    email: string;
-    linkedin: string;
-  };
-}
+// Removed unused interface - MaintenanceConfig is defined in src/config/maintenance.ts
 
 function toggleMaintenance(): void {
   try {

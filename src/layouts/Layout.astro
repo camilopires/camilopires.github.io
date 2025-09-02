@@ -16,6 +16,11 @@ import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import { MAINTENANCE_CONFIG } from '../config/maintenance';
 
+// Handle maintenance mode redirect at server level
+if (MAINTENANCE_CONFIG.enabled && Astro.url.pathname !== '/maintenance/') {
+  return Astro.redirect('/maintenance/');
+}
+
 const { 
   title, 
   description = "Camilo Pires - Product Manager & App Developer passionate about creating impactful digital experiences",
@@ -89,9 +94,6 @@ const cleanStructuredData = JSON.parse(JSON.stringify(structuredData));
 
 <!DOCTYPE html>
 <html lang="en">
-  {MAINTENANCE_CONFIG.enabled && (
-    <meta http-equiv="refresh" content="0;url=/maintenance/" />
-  )}
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
