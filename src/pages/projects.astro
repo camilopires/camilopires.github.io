@@ -53,13 +53,31 @@ import appLogo from '../assets/BoxingScorecard/AppLogo.png';
             
             <div class="mb-6">
               <h3 class="font-semibold text-gray-900 mb-3">Key Features:</h3>
-              <ul class="space-y-2 text-gray-600">
-                <li>• Professional 10-point must scoring system</li>
-                <li>• Real-time round-by-round scoring</li>
-                <li>• Early fight ending support (KO, TKO, retirement)</li>
-                <li>• Fighter profiles with corner colors</li>
-                <li>• Fight history and detailed records</li>
-                <li>• iCloud synchronization via CloudKit</li>
+              <ul class="space-y-2 text-gray-600" role="list" aria-label="Key features of the BoxingScorecard app">
+                <li class="flex items-start">
+                  <span class="text-red-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>Professional 10-point must scoring system</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>Real-time round-by-round scoring</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>Early fight ending support (KO, TKO, retirement)</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>Fighter profiles with corner colors</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>Fight history and detailed records</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>iCloud synchronization via CloudKit</span>
+                </li>
               </ul>
             </div>
 
@@ -74,7 +92,7 @@ import appLogo from '../assets/BoxingScorecard/AppLogo.png';
             </div>
 
             <div class="flex justify-center">
-              <button onclick="window.location.href='/projects/boxingscorecard'" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center" aria-label="View BoxingScorecard project details">
+              <button onclick="window.location.href='/projects/boxingscorecard'" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-label="View BoxingScorecard project details">
                 View Details
               </button>
             </div>
@@ -83,10 +101,10 @@ import appLogo from '../assets/BoxingScorecard/AppLogo.png';
 
         <!-- Coming Soon Project -->
         <article class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8">
+          <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8 h-full">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-3">
               <h2 class="text-2xl font-bold text-gray-900">Project Coming Soon</h2>
-              <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-auto" aria-label="Project status: In Development">In Development</span>
+              <span class="bg-blue-100 text-blue-800 border border-blue-200 px-3 py-1 rounded-full text-sm font-semibold self-start sm:self-auto shadow-sm" aria-label="Project status: In Development"><span aria-hidden="true">🚧</span> In Development</span>
             </div>
             <p class="text-gray-600 mb-6">
               An exciting new project is currently in development. This will showcase advanced 
@@ -95,25 +113,52 @@ import appLogo from '../assets/BoxingScorecard/AppLogo.png';
             
             <div class="mb-6">
               <h3 class="font-semibold text-gray-900 mb-3">Expected Features:</h3>
-              <ul class="space-y-2 text-gray-600">
-                <li>• Advanced user experience design</li>
-                <li>• Scalable architecture</li>
-                <li>• Data-driven insights</li>
-                <li>• Performance optimisation</li>
+              <ul class="space-y-2 text-gray-600" role="list" aria-label="Expected features for the upcoming project">
+                <li class="flex items-start">
+                  <span class="text-blue-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>Advanced user experience design</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>Scalable architecture</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>Data-driven insights</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-600 mr-2 mt-0.5" aria-hidden="true">•</span>
+                  <span>Performance optimisation</span>
+                </li>
               </ul>
             </div>
 
             <div class="mb-6">
               <h3 class="font-semibold text-gray-900 mb-3">Technologies:</h3>
               <div class="flex flex-wrap gap-2">
-                <span class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 border border-gray-200 shadow-sm">TBD</span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold bg-yellow-100 text-yellow-800 border border-yellow-200 shadow-sm"><span aria-hidden="true">🔮</span> TBD</span>
               </div>
             </div>
 
-            <div class="bg-gray-100 p-4 rounded-lg">
-              <p class="text-gray-600 text-center">
+            <div class="bg-gradient-to-r from-blue-100 to-indigo-100 border border-blue-300 p-4 rounded-lg mb-6">
+              <div class="flex items-center justify-center mb-2">
+                <span class="text-2xl mr-2" aria-hidden="true">🚀</span>
+                <span class="text-blue-900 font-semibold">Coming Soon</span>
+              </div>
+              <p class="text-blue-900 text-sm text-center">
                 Stay tuned for updates!
               </p>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="relative inline-block">
+                <div id="coming-soon-status" class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg transform rotate-12 z-10" aria-hidden="true">
+                  COMING SOON
+                </div>
+                <button class="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors text-center cursor-not-allowed shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2" disabled aria-label="Project details coming soon" aria-describedby="coming-soon-status">
+                  View Details
+                </button>
+              </div>
             </div>
           </div>
         </article>
