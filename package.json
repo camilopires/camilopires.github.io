@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "maintenance": "node scripts/toggle-maintenance.js"
+    "maintenance": "tsx scripts/toggle-maintenance.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -21,6 +21,7 @@
     "typescript": "^5.9.2"
   },
   "devDependencies": {
-    "@types/node": "^24.3.0"
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5"
   }
 }
