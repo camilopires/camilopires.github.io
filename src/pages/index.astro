@@ -2,21 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import { Image } from 'astro:assets';
-import { MAINTENANCE_CONFIG } from '../config/maintenance';
 import headshotImage from '../assets/CP Headshot.jpg';
 import appLogo from '../assets/BoxingScorecard/AppLogo.png';
 ---
 
-{MAINTENANCE_CONFIG.enabled ? (
-  <meta http-equiv="refresh" content="0;url=/maintenance/" />
-) : (
-  <Layout 
-    title="Camilo Pires - Product Manager & App Developer"
-    description="Product Manager & App Developer passionate about creating impactful and inclusive digital experiences. Expert in iOS development, UX design, and accessibility consulting."
-    image="/images/CP Headshot.jpg"
-    type="profile"
-    tags={["Product Manager", "iOS Developer", "UX Designer", "Accessibility", "Swift", "SwiftUI"]}
-  >
+<Layout 
+  title="Camilo Pires - Product Manager & App Developer"
+  description="Product Manager & App Developer passionate about creating impactful and inclusive digital experiences. Expert in iOS development, UX design, and accessibility consulting."
+  image="/images/CP Headshot.jpg"
+  type="profile"
+  tags={["Product Manager", "iOS Developer", "UX Designer", "Accessibility", "Swift", "SwiftUI"]}
+>
     <Header />
     <main id="main-content" class="pt-8">
 
@@ -182,4 +178,3 @@ import appLogo from '../assets/BoxingScorecard/AppLogo.png';
       </aside>
     </main>
   </Layout>
-)}
