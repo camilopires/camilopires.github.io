@@ -16,8 +16,8 @@ import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import { MAINTENANCE_CONFIG } from '../config/maintenance';
 
-// Handle maintenance mode - show maintenance content for all pages except maintenance page itself
-const showMaintenance = MAINTENANCE_CONFIG.enabled && !Astro.url.pathname.startsWith('/maintenance');
+// Handle maintenance mode - show maintenance content for all pages when enabled
+const showMaintenance = MAINTENANCE_CONFIG.enabled;
 
 const { 
   title, 
