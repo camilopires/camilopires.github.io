@@ -17,7 +17,7 @@ import Footer from '../components/Footer.astro';
 import { MAINTENANCE_CONFIG } from '../config/maintenance';
 
 // Handle maintenance mode redirect at server level
-if (MAINTENANCE_CONFIG.enabled && Astro.url.pathname !== '/maintenance/') {
+if (MAINTENANCE_CONFIG.enabled && !Astro.url.pathname.startsWith('/maintenance')) {
   return Astro.redirect('/maintenance/');
 }
 
