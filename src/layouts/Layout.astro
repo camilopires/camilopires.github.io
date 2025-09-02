@@ -16,7 +16,8 @@ import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import { MAINTENANCE_CONFIG } from '../config/maintenance';
 
-// Handle maintenance mode - show maintenance content for all pages when enabled
+// Handle maintenance mode - show maintenance content for ALL URLs when enabled
+// This ensures any URL (including 404s) shows maintenance content
 const showMaintenance = MAINTENANCE_CONFIG.enabled;
 
 const { 
