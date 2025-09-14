@@ -3,12 +3,11 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import { Image } from 'astro:assets';
 import appLogo from '../../assets/BoxingScorecard/AppLogo.png';
-import mockup1 from '../../assets/BoxingScorecard/AppMockups/1.png';
-import mockup2 from '../../assets/BoxingScorecard/AppMockups/2.png';
-import mockup3 from '../../assets/BoxingScorecard/AppMockups/3.png';
-import mockup4 from '../../assets/BoxingScorecard/AppMockups/4.png';
-import mockup5 from '../../assets/BoxingScorecard/AppMockups/5.png';
-import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
+import mockup1 from '../../assets/BoxingScorecard/AppMockups/1 - Home Screen-portrait.png';
+import mockup2 from '../../assets/BoxingScorecard/AppMockups/2 - Boxer Setup-portrait.png';
+import mockup3 from '../../assets/BoxingScorecard/AppMockups/3 - Scoring-portrait.png';
+import mockup4 from '../../assets/BoxingScorecard/AppMockups/4 - Knockdown-portrait.png';
+import mockup5 from '../../assets/BoxingScorecard/AppMockups/5 - End Fight Early-portrait.png';
 ---
 
 <Layout title="BoxingScorecard Project - Camilo Pires" description="Professional iOS boxing scoring app with real-time updates, comprehensive statistics, and official 10-point must system">
@@ -95,11 +94,11 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
             <!-- Swiper Container -->
             <div class="swiper relative overflow-hidden rounded-2xl">
               <div class="swiper-wrapper">
-                <!-- Slide 1: Main Scoring Interface -->
+                <!-- Slide 1: Home Screen -->
                 <div class="swiper-slide">
                   <Image 
                     src={mockup1} 
-                    alt="BoxingScorecard main scoring interface showing round-by-round scoring with the 10-point must system"
+                    alt="BoxingScorecard home screen showing main menu and app navigation"
                     width={320}
                     height={640}
                     class="w-full h-auto"
@@ -110,11 +109,11 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
                   />
                 </div>
                 
-                <!-- Slide 2: Round Management -->
+                <!-- Slide 2: Boxer Setup -->
                 <div class="swiper-slide">
                   <Image 
                     src={mockup2} 
-                    alt="BoxingScorecard round management interface with real-time scoring updates and navigation"
+                    alt="BoxingScorecard boxer setup screen for entering fighter names and match configuration"
                     width={320}
                     height={640}
                     class="w-full h-auto"
@@ -125,11 +124,11 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
                   />
                 </div>
                 
-                <!-- Slide 3: Fight Statistics -->
+                <!-- Slide 3: Scoring -->
                 <div class="swiper-slide">
                   <Image 
                     src={mockup3} 
-                    alt="BoxingScorecard comprehensive fight statistics and analytics dashboard"
+                    alt="BoxingScorecard scoring interface with round-by-round scoring and 10-point must system"
                     width={320}
                     height={640}
                     class="w-full h-auto"
@@ -140,11 +139,11 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
                   />
                 </div>
                 
-                <!-- Slide 4: Fighter Profiles -->
+                <!-- Slide 4: Knockdown -->
                 <div class="swiper-slide">
                   <Image 
                     src={mockup4} 
-                    alt="BoxingScorecard fighter profile management with detailed records and performance history"
+                    alt="BoxingScorecard knockdown screen for recording knockdowns and counting recovery time"
                     width={320}
                     height={640}
                     class="w-full h-auto"
@@ -155,11 +154,11 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
                   />
                 </div>
                 
-                <!-- Slide 5: Scorecard Generation -->
+                <!-- Slide 5: End Fight Early -->
                 <div class="swiper-slide">
                   <Image 
                     src={mockup5} 
-                    alt="BoxingScorecard professional scorecard generation and sharing features"
+                    alt="BoxingScorecard end fight early screen for stopping matches due to knockout or technical decision"
                     width={320}
                     height={640}
                     class="w-full h-auto"
@@ -170,20 +169,6 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
                   />
                 </div>
                 
-                <!-- Slide 6: Additional Feature -->
-                <div class="swiper-slide">
-                  <Image 
-                    src={mockup6} 
-                    alt="BoxingScorecard additional features and advanced functionality"
-                    width={320}
-                    height={640}
-                    class="w-full h-auto"
-                    loading="lazy"
-                    sizes="320px"
-                    quality={90}
-                    format="webp"
-                  />
-                </div>
               </div>
               
               <!-- Navigation Arrows -->
@@ -197,7 +182,7 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
             <!-- Caption -->
             <div class="text-center mt-3">
               <p id="carousel-caption" class="text-sm text-gray-600 font-medium">
-                Main Scoring Interface - Professional boxing scoring with the official 10-point must system
+                Home Screen - Main menu with New Fight button and Recent Fights list
               </p>
             </div>
             
@@ -364,12 +349,11 @@ import mockup6 from '../../assets/BoxingScorecard/AppMockups/6.png';
       
       // Caption text for each slide
       const captions = [
-        'Main Scoring Interface - Professional boxing scoring with the official 10-point must system',
-        'Round Management - Real-time scoring updates and seamless round navigation',
-        'Fight Statistics - Comprehensive analytics and performance metrics dashboard',
-        'Fighter Profiles - Detailed records and performance history management',
-        'Scorecard Generation - Professional scorecard creation and sharing features',
-        'Additional Features - Advanced functionality and enhanced user experience'
+        'Home Screen - Main menu with New Fight button and Recent Fights list',
+        'Boxer Setup - Enter fighter names and match configuration',
+        'Scoring Interface - Round-by-round scoring with 10-point must system',
+        'Knockdown Tracking - Record knockdowns and point deductions',
+        'End Fight Early - Stop matches due to knockout or technical decision'
       ];
       
       try {
