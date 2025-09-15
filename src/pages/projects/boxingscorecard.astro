@@ -3,9 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import { Image } from 'astro:assets';
 import appLogo from '../../assets/BoxingScorecard/AppLogo.png';
-import mockup1 from '../../assets/BoxingScorecard/AppMockups/1 - Home Screen-portrait.png';
+import mockup1 from '../../assets/BoxingScorecard/AppMockups/1 - Scoring-portrait.png';
 import mockup2 from '../../assets/BoxingScorecard/AppMockups/2 - Boxer Setup-portrait.png';
-import mockup3 from '../../assets/BoxingScorecard/AppMockups/3 - Scoring-portrait.png';
+import mockup3 from '../../assets/BoxingScorecard/AppMockups/3 - Home Screen-portrait.png';
 import mockup4 from '../../assets/BoxingScorecard/AppMockups/4 - Knockdown-portrait.png';
 import mockup5 from '../../assets/BoxingScorecard/AppMockups/5 - End Fight Early-portrait.png';
 ---
@@ -94,11 +94,11 @@ import mockup5 from '../../assets/BoxingScorecard/AppMockups/5 - End Fight Early
             <!-- Swiper Container -->
             <div class="swiper relative overflow-hidden rounded-2xl">
               <div class="swiper-wrapper">
-                <!-- Slide 1: Home Screen -->
+                <!-- Slide 1: Scoring -->
                 <div class="swiper-slide">
                   <Image 
                     src={mockup1} 
-                    alt="BoxingScorecard home screen showing main menu and app navigation"
+                    alt="BoxingScorecard scoring interface with round-by-round scoring and 10-point must system"
                     width={320}
                     height={640}
                     class="w-full h-auto"
@@ -124,11 +124,11 @@ import mockup5 from '../../assets/BoxingScorecard/AppMockups/5 - End Fight Early
                   />
                 </div>
                 
-                <!-- Slide 3: Scoring -->
+                <!-- Slide 3: Home Screen -->
                 <div class="swiper-slide">
                   <Image 
                     src={mockup3} 
-                    alt="BoxingScorecard scoring interface with round-by-round scoring and 10-point must system"
+                    alt="BoxingScorecard home screen showing main menu and app navigation"
                     width={320}
                     height={640}
                     class="w-full h-auto"
@@ -182,7 +182,7 @@ import mockup5 from '../../assets/BoxingScorecard/AppMockups/5 - End Fight Early
             <!-- Caption -->
             <div class="text-center mt-3">
               <p id="carousel-caption" class="text-sm text-gray-600 font-medium">
-                Home Screen - Main menu with New Fight button and Recent Fights list
+                Scoring Interface - Round-by-round scoring with 10-point must system
               </p>
             </div>
             
@@ -344,9 +344,9 @@ import mockup5 from '../../assets/BoxingScorecard/AppMockups/5 - End Fight Early
       
       // Caption text for each slide
       const captions = [
-        'Home Screen - Main menu with New Fight button and Recent Fights list',
-        'Boxer Setup - Enter fighter names and match configuration',
         'Scoring Interface - Round-by-round scoring with 10-point must system',
+        'Boxer Setup - Enter fighter names and match configuration',
+        'Home Screen - Main menu with New Fight button and Recent Fights list',
         'Knockdown Tracking - Record knockdowns and point deductions',
         'End Fight Early - Stop matches due to knockout or technical decision'
       ];
