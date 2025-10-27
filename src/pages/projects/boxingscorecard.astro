@@ -3,11 +3,12 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import { Image } from 'astro:assets';
 import appLogo from '../../assets/BoxingScorecard/AppLogo.png';
-import mockup1 from '../../assets/BoxingScorecard/AppMockups/1 - Scoring-portrait.png';
+import mockup1 from '../../assets/BoxingScorecard/AppMockups/1 - Scoring iPhone-portrait.png';
 import mockup2 from '../../assets/BoxingScorecard/AppMockups/2 - Boxer Setup-portrait.png';
 import mockup3 from '../../assets/BoxingScorecard/AppMockups/3 - Home Screen-portrait.png';
-import mockup4 from '../../assets/BoxingScorecard/AppMockups/4 - Knockdown-portrait.png';
+import mockup4 from '../../assets/BoxingScorecard/AppMockups/4 - Knockdown iPhone-portrait.png';
 import mockup5 from '../../assets/BoxingScorecard/AppMockups/5 - End Fight Early-portrait.png';
+import mockup6 from '../../assets/BoxingScorecard/AppMockups/6 - Final Decision iPhone-portrait.png';
 ---
 
 <Layout title="BoxingScorecard Project - Camilo Pires" description="Professional iOS boxing scoring app with real-time updates, comprehensive statistics, and official 10-point must system">
@@ -152,6 +153,21 @@ import mockup5 from '../../assets/BoxingScorecard/AppMockups/5 - End Fight Early
                   <Image 
                     src={mockup5} 
                     alt="BoxingScorecard end fight early screen for stopping matches due to knockout or technical decision"
+                    width={320}
+                    height={640}
+                    class="w-full h-auto"
+                    loading="lazy"
+                    sizes="320px"
+                    quality={90}
+                    format="webp"
+                  />
+                </div>
+                
+                <!-- Slide 6: Final Decision -->
+                <div class="swiper-slide">
+                  <Image 
+                    src={mockup6} 
+                    alt="BoxingScorecard final decision screen showing complete fight results and scorecard summary"
                     width={320}
                     height={640}
                     class="w-full h-auto"
@@ -328,7 +344,8 @@ import mockup5 from '../../assets/BoxingScorecard/AppMockups/5 - End Fight Early
         'Boxer Setup - Enter fighter names and match configuration',
         'Home Screen - Main menu with New Fight button and Recent Fights list',
         'Knockdown & Point Deduction Tracking - Track fight events and scoring adjustments',
-        'End Fight Early - Stop matches due to knockout or technical decision'
+        'End Fight Early - Stop matches due to knockout or technical decision',
+        'Final Decision - Complete fight results and record the real winner based on judges decision'
       ];
       
       try {
