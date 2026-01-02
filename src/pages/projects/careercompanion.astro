@@ -1,0 +1,325 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import { Image } from 'astro:assets';
+import appLogo from '../../assets/CareerCompanion/AppLogo.png';
+---
+
+<Layout title="Career Companion Project - Camilo Pires" description="Native iOS app for tracking 1:1 meetings with managers and career goals. Built with SwiftUI and CloudKit for secure, private data storage.">
+  <Header />
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-50 to-blue-50" aria-labelledby="project-hero-heading">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center mb-6">
+            <Image
+              src={appLogo}
+              alt=""
+              width={64}
+              height={64}
+              class="w-16 h-16 rounded-xl mr-4 shadow-lg"
+              loading="eager"
+              sizes="64px"
+              quality={90}
+              format="webp"
+            />
+            <h1 id="project-hero-heading" class="text-4xl sm:text-5xl font-bold text-gray-900">
+              Career Companion
+            </h1>
+          </div>
+          <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Your personal career growth partner. Track 1:1 meetings, set career goals, record achievements, and generate performance reports—all stored securely in your personal iCloud account.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <div class="relative inline-block">
+              <div class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg transform rotate-12 z-10" aria-label="Coming Soon">
+                COMING SOON
+              </div>
+              <button
+                class="inline-flex items-center px-6 py-3 bg-gray-400 text-white font-semibold rounded-lg cursor-not-allowed shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+                disabled
+                aria-label="App coming soon to the App Store">
+                <span class="mr-2" aria-hidden="true">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                  </svg>
+                </span>
+                View on App Store
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200">iOS 18+</span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800 border border-orange-200">Swift 5.9</span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 border border-purple-200">SwiftUI</span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">CloudKit</span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 border border-red-200">watchOS 10+</span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 text-teal-800 border border-teal-200">WCAG AA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">The Challenge & Solution</h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Career growth requires consistent effort—preparing for 1:1 meetings, tracking action items, setting meaningful goals, and documenting achievements for performance reviews. Most professionals struggle to maintain this discipline with scattered notes, forgotten follow-ups, and missing context when review season arrives.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              <strong>Career Companion</strong> transforms career management into a seamless experience. Built with SwiftUI and CloudKit, it provides a secure, private space to prepare agendas, capture meeting notes, track action items, and build a comprehensive record of your professional achievements—all synced across your Apple devices.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              Whether you're an individual contributor managing 1:1s with your manager, or a manager tracking meetings with multiple direct reports, Career Companion adapts to your workflow. With AI-powered suggestions, Siri integration, and an Apple Watch companion app, your career data is always at your fingertips.
+            </p>
+            <a href="/projects/careercompanion-privacy" class="text-blue-600 hover:text-blue-800 font-semibold mt-4 block">
+              Read Career Companion Privacy Policy →
+            </a>
+          </div>
+          <div class="bg-gradient-to-br from-red-50 to-blue-50 rounded-2xl p-8 shadow-lg">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Data Privacy First</h3>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <span class="text-blue-600 text-2xl mr-3" aria-hidden="true">🔒</span>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Your Data, Your iCloud</h4>
+                  <p class="text-gray-600 text-sm">All data stored in CloudKit's private database in your personal iCloud account</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="text-blue-600 text-2xl mr-3" aria-hidden="true">🛡️</span>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Never Shared</h4>
+                  <p class="text-gray-600 text-sm">Data is never shared with the developer or third parties</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="text-blue-600 text-2xl mr-3" aria-hidden="true">🔄</span>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Automatic Sync</h4>
+                  <p class="text-gray-600 text-sm">Seamlessly syncs across all your Apple devices</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="text-blue-600 text-2xl mr-3" aria-hidden="true">💾</span>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Persistent Storage</h4>
+                  <p class="text-gray-600 text-sm">Data persists even if the app is deleted</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Key Features</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-blue-600 text-4xl mb-4" aria-hidden="true">📋</div>
+            <h3 class="text-xl font-semibold mb-3">1:1 Meeting Management</h3>
+            <p class="text-gray-600">Prepare agendas, capture notes, track action items with automatic carry-over to next meetings.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-green-600 text-4xl mb-4" aria-hidden="true">🎯</div>
+            <h3 class="text-xl font-semibold mb-3">Career Goals Tracking</h3>
+            <p class="text-gray-600">Set goals with progress tracking, target dates, and milestones across categories like Technical and Leadership.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-purple-600 text-4xl mb-4" aria-hidden="true">🏆</div>
+            <h3 class="text-xl font-semibold mb-3">Achievement Recording</h3>
+            <p class="text-gray-600">Document achievements with impact statements, link them to goals, and import from meeting highlights.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-orange-600 text-4xl mb-4" aria-hidden="true">📊</div>
+            <h3 class="text-xl font-semibold mb-3">Performance Reports</h3>
+            <p class="text-gray-600">Generate formatted reports for reviews with customizable date ranges and export to PDF or Markdown.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-teal-600 text-4xl mb-4" aria-hidden="true">👥</div>
+            <h3 class="text-xl font-semibold mb-3">Flexible Relationships</h3>
+            <p class="text-gray-600">Track 1:1s with managers, mentors, peers, stakeholders, or create custom relationship types.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-indigo-600 text-4xl mb-4" aria-hidden="true">🔄</div>
+            <h3 class="text-xl font-semibold mb-3">IC & Manager Modes</h3>
+            <p class="text-gray-600">Switch between tracking meetings with your manager or managing your direct reports seamlessly.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-red-600 text-4xl mb-4" aria-hidden="true">⌚</div>
+            <h3 class="text-xl font-semibold mb-3">Apple Watch App</h3>
+            <p class="text-gray-600">View meetings, complete action items, and log sentiment directly from your wrist.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-pink-600 text-4xl mb-4" aria-hidden="true">🤖</div>
+            <h3 class="text-xl font-semibold mb-3">AI Suggestions</h3>
+            <p class="text-gray-600">Smart agenda suggestions based on meeting history powered by iOS 18+ on-device intelligence.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md text-center">
+            <div class="text-teal-600 text-4xl mb-4" aria-hidden="true">♿</div>
+            <h3 class="font-semibold text-gray-900 mb-3">Accessibility Focused</h3>
+            <p class="text-gray-600">Designed with VoiceOver support, Dynamic Type, and high contrast options for inclusive experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">More Capabilities</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-4 text-gray-900">Meeting Features</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Meeting timer</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Weekly planning sections</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Key metrics tracking</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Feedback sections (What Went Well, Blockers)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Sentiment tracking</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Calendar integration (EventKit)</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-4 text-gray-900">Action Items</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Priority and status tracking</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Owner assignment</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Due date management</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Links and comments</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Automatic carry-over</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>iOS widgets</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-4 text-gray-900">Integrations</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Siri Shortcuts</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Export to Slack/Teams/Email</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Data export/import (JSON/CSV)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Demo mode for exploration</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Full backup and restore</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2" aria-hidden="true">✓</span>
+                <span>Custom relationship types</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Technologies Used</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <span aria-label="Technology: iOS platform" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800 border border-blue-200 shadow-sm">iOS 18+</span>
+          <span aria-label="Technology: watchOS platform" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-red-100 text-red-800 border border-red-200 shadow-sm">watchOS 10+</span>
+          <span aria-label="Technology: Swift programming language" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orange-100 text-orange-800 border border-orange-200 shadow-sm">Swift 5.9+</span>
+          <span aria-label="Technology: SwiftUI framework" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-800 border border-green-200 shadow-sm">SwiftUI</span>
+          <span aria-label="Technology: CloudKit sync" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-100 text-purple-800 border border-purple-200 shadow-sm">CloudKit</span>
+          <span aria-label="Technology: StoreKit for in-app purchases" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800 border border-yellow-200 shadow-sm">StoreKit 2</span>
+          <span aria-label="Technology: EventKit for calendar" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 border border-indigo-200 shadow-sm">EventKit</span>
+          <span aria-label="Technology: WidgetKit for widgets" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-pink-100 text-pink-800 border border-pink-200 shadow-sm">WidgetKit</span>
+          <span aria-label="Technology: App Intents for Siri" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-teal-100 text-teal-800 border border-teal-200 shadow-sm">App Intents</span>
+          <span aria-label="Technology: MVVM architecture" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-800 border border-gray-200 shadow-sm">MVVM</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600 text-white text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Ready to take control of your career growth?</h2>
+        <p class="text-xl text-blue-100 mb-8">
+          Career Companion is currently in development. Sign up to be notified when it launches on the App Store!
+        </p>
+        <div class="relative inline-block">
+          <div class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg transform rotate-12 z-10" aria-hidden="true">
+            COMING SOON
+          </div>
+          <button
+            class="inline-flex items-center px-8 py-4 bg-white text-gray-400 font-semibold rounded-lg cursor-not-allowed shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+            disabled
+            aria-label="App coming soon to the App Store">
+            <span class="mr-2" aria-hidden="true">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+            </span>
+            Coming Soon to App Store
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Projects -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <a href="/projects/" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded">
+          <span aria-hidden="true">←</span> Back to All Projects
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
