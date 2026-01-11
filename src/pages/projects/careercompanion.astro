@@ -3,6 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import { Image } from 'astro:assets';
 import appLogo from '../../assets/CareerCompanion/AppLogo.png';
+import mockup1 from '../../assets/CareerCompanion/AppMockups/1. Home Screen iPhone.png';
+import mockup2 from '../../assets/CareerCompanion/AppMockups/2. 1-2 Overview Screen iPhone.png';
+import mockup3 from '../../assets/CareerCompanion/AppMockups/3. Career Screen iPhone.png';
+import mockup4 from '../../assets/CareerCompanion/AppMockups/4. 1-1 Preparation Screen iPhone.png';
 ---
 
 <Layout title="Career Companion Project - Camilo Pires" description="Native iOS app for tracking 1:1 meetings with managers and career goals. Built with SwiftUI and CloudKit for secure, private data storage.">
@@ -81,36 +85,101 @@ import appLogo from '../../assets/CareerCompanion/AppLogo.png';
               Read Career Companion Privacy Policy →
             </a>
           </div>
-          <div class="bg-gradient-to-br from-red-50 to-blue-50 rounded-2xl p-8 shadow-lg">
-            <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Data Privacy First</h3>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <span class="text-blue-600 text-2xl mr-3" aria-hidden="true">🔒</span>
-                <div>
-                  <h4 class="font-semibold text-gray-900">Your Data, Your iCloud</h4>
-                  <p class="text-gray-600 text-sm">All data stored in CloudKit's private database in your personal iCloud account</p>
+          <div class="-mt-8">
+            <!-- App Screenshots Carousel -->
+            <div class="relative mx-auto w-80">
+              <!-- Swiper Container -->
+              <div class="swiper relative overflow-hidden rounded-2xl">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1: Home Screen -->
+                  <div class="swiper-slide">
+                    <Image
+                      src={mockup1}
+                      alt="Career Companion home screen showing your upcoming 1:1 meetings and quick action buttons"
+                      width={320}
+                      height={640}
+                      class="w-full h-auto"
+                      loading="eager"
+                      sizes="320px"
+                      quality={90}
+                      format="webp"
+                    />
+                  </div>
+
+                  <!-- Slide 2: 1-2 Overview -->
+                  <div class="swiper-slide">
+                    <Image
+                      src={mockup2}
+                      alt="Career Companion 1:1 overview screen displaying meeting history and relationship tracking"
+                      width={320}
+                      height={640}
+                      class="w-full h-auto"
+                      loading="lazy"
+                      sizes="320px"
+                      quality={90}
+                      format="webp"
+                    />
+                  </div>
+
+                  <!-- Slide 3: Career Screen -->
+                  <div class="swiper-slide">
+                    <Image
+                      src={mockup3}
+                      alt="Career Companion career screen with goals tracking, achievements, and progress metrics"
+                      width={320}
+                      height={640}
+                      class="w-full h-auto"
+                      loading="lazy"
+                      sizes="320px"
+                      quality={90}
+                      format="webp"
+                    />
+                  </div>
+
+                  <!-- Slide 4: 1-1 Preparation -->
+                  <div class="swiper-slide">
+                    <Image
+                      src={mockup4}
+                      alt="Career Companion meeting preparation screen with agenda items, notes, and action items"
+                      width={320}
+                      height={640}
+                      class="w-full h-auto"
+                      loading="lazy"
+                      sizes="320px"
+                      quality={90}
+                      format="webp"
+                    />
+                  </div>
+
                 </div>
+
+                <!-- Navigation Arrows -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
               </div>
-              <div class="flex items-start">
-                <span class="text-blue-600 text-2xl mr-3" aria-hidden="true">🛡️</span>
-                <div>
-                  <h4 class="font-semibold text-gray-900">Never Shared</h4>
-                  <p class="text-gray-600 text-sm">Data is never shared with the developer or third parties</p>
-                </div>
+
+              <!-- Navigation Dots (Pagination) -->
+              <div class="swiper-pagination"></div>
+
+              <!-- Caption -->
+              <div class="text-center mt-3">
+                <p id="carousel-caption" class="text-sm text-gray-600 font-medium">
+                  Home Screen - Your command center for upcoming meetings and quick actions
+                </p>
               </div>
-              <div class="flex items-start">
-                <span class="text-blue-600 text-2xl mr-3" aria-hidden="true">🔄</span>
-                <div>
-                  <h4 class="font-semibold text-gray-900">Automatic Sync</h4>
-                  <p class="text-gray-600 text-sm">Seamlessly syncs across all your Apple devices</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <span class="text-blue-600 text-2xl mr-3" aria-hidden="true">💾</span>
-                <div>
-                  <h4 class="font-semibold text-gray-900">Persistent Storage</h4>
-                  <p class="text-gray-600 text-sm">Data persists even if the app is deleted</p>
-                </div>
+
+              <!-- Accessibility Controls -->
+              <div class="flex justify-center items-center gap-4 mt-6">
+                <button
+                  id="autoplay-toggle"
+                  class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                  aria-label="Pause auto-scrolling carousel"
+                  aria-pressed="true">
+                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                  </svg>
+                  Pause Auto-scroll
+                </button>
               </div>
             </div>
           </div>
@@ -322,4 +391,228 @@ import appLogo from '../../assets/CareerCompanion/AppLogo.png';
       </div>
     </section>
   </main>
+
+  <!-- Import Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Import Swiper JS using ES modules -->
+  <script type="module" is:inline>
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+    // Swiper initialization
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('✅ Swiper ES module loaded successfully!');
+
+      const caption = document.getElementById('carousel-caption');
+
+      // Caption text for each slide
+      const captions = [
+        'Home Screen - Your command center for upcoming meetings and quick actions',
+        '1:1 Overview - Track meeting history and build stronger working relationships',
+        'Career Screen - Set goals, record achievements, and monitor your growth',
+        'Meeting Prep - Prepare agendas, notes, and action items before your 1:1'
+      ];
+
+      try {
+        // Get accessibility controls
+        const autoplayToggle = document.getElementById('autoplay-toggle');
+        let isAutoplayActive = true;
+
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+          speed: 600,
+          effect: 'slide',
+
+          // Enable autoplay with continuous scrolling
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            waitForTransition: true,
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          // Pagination (dots)
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            type: 'bullets',
+            renderBullet: function (index, className) {
+              return '<button class="' + className + '" aria-label="Go to slide ' + (index + 1) + '"></button>';
+            },
+          },
+
+          // Keyboard control
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+
+          // Touch/swipe settings
+          touchRatio: 1,
+          touchAngle: 45,
+          simulateTouch: true,
+
+          // Smooth transitions
+          cssMode: false,
+          watchSlidesProgress: true,
+
+          // Enhanced Accessibility (Swiper native)
+          a11y: {
+            enabled: true,
+            prevSlideMessage: 'Previous screenshot',
+            nextSlideMessage: 'Next screenshot',
+            firstSlideMessage: 'This is the first screenshot',
+            lastSlideMessage: 'This is the last screenshot',
+            paginationBulletMessage: 'Go to screenshot {{index}}',
+          },
+
+          // Events
+          on: {
+            slideChange: function (swiperInstance) {
+              // Update caption when slide changes
+              if (caption && captions[swiperInstance.activeIndex]) {
+                caption.textContent = captions[swiperInstance.activeIndex];
+              }
+            },
+            init: function (swiperInstance) {
+              // Set initial caption
+              if (caption && captions[0]) {
+                caption.textContent = captions[0];
+              }
+              // Start autoplay
+              swiperInstance.autoplay.start();
+            },
+            beforeDestroy: function (swiperInstance) {
+              // Clean up autoplay
+              swiperInstance.autoplay.stop();
+            }
+          }
+        });
+
+        // Handle accessibility controls
+        if (autoplayToggle) {
+          autoplayToggle.addEventListener('click', function() {
+            if (isAutoplayActive) {
+              // Pause autoplay
+              swiper.autoplay.stop();
+              isAutoplayActive = false;
+              autoplayToggle.innerHTML = `
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                Resume Auto-scroll
+              `;
+              autoplayToggle.setAttribute('aria-label', 'Resume auto-scrolling carousel');
+              autoplayToggle.setAttribute('aria-pressed', 'false');
+              autoplayToggle.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+              autoplayToggle.classList.add('bg-green-600', 'hover:bg-green-700');
+            } else {
+              // Resume autoplay
+              swiper.autoplay.start();
+              isAutoplayActive = true;
+              autoplayToggle.innerHTML = `
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                </svg>
+                Pause Auto-scroll
+              `;
+              autoplayToggle.setAttribute('aria-label', 'Pause auto-scrolling carousel');
+              autoplayToggle.setAttribute('aria-pressed', 'true');
+              autoplayToggle.classList.remove('bg-green-600', 'hover:bg-green-700');
+              autoplayToggle.classList.add('bg-blue-600', 'hover:bg-blue-700');
+            }
+          });
+
+          // Keyboard accessibility
+          autoplayToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              autoplayToggle.click();
+            }
+          });
+        }
+
+        console.log('🎉 Swiper carousel initialized successfully!');
+
+      } catch (error) {
+        console.error('❌ Error initializing Swiper:', error);
+      }
+    });
+  </script>
+
+  <style>
+    /* Custom Swiper styles */
+    .swiper-pagination {
+      position: relative !important;
+      margin-top: 0.5rem !important;
+      bottom: auto !important;
+    }
+
+    .swiper-pagination-bullet {
+      width: 12px !important;
+      height: 12px !important;
+      background-color: rgb(209 213 219) !important; /* gray-300 */
+      opacity: 1 !important;
+      margin: 0 4px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: rgb(37 99 235) !important; /* blue-600 */
+    }
+
+    .swiper-pagination-bullet:hover {
+      background-color: rgb(156 163 175) !important; /* gray-400 */
+    }
+
+    .swiper-pagination-bullet-active:hover {
+      background-color: rgb(37 99 235) !important; /* blue-600 */
+    }
+
+    /* Navigation buttons - Swiper handles accessibility */
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 48px !important;
+      height: 48px !important;
+      margin-top: 0 !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      border: 2px solid rgb(59 130 246) !important; /* blue-500 */
+      border-radius: 50% !important;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06) !important;
+      color: rgb(59 130 246) !important; /* blue-500 */
+      transition: all 0.2s ease-in-out !important;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background: rgb(255, 255, 255) !important;
+      border-color: rgb(37 99 235) !important; /* blue-600 */
+      color: rgb(37 99 235) !important; /* blue-600 */
+      transform: scale(1.05) !important;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05) !important;
+    }
+
+    .swiper-button-next {
+      right: 12px !important;
+    }
+
+    .swiper-button-prev {
+      left: 12px !important;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 20px !important;
+      font-weight: bold !important;
+    }
+  </style>
 </Layout>
