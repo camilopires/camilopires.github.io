@@ -259,6 +259,9 @@ import Header from '../components/Header.astro';
     const animationToggle = document.getElementById('animation-toggle');
     const toggleKnob = animationToggle ? animationToggle.querySelector('span[aria-hidden="true"]') : null;
 
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Helper to update toggle visual state
     function updateToggleVisual(isOn) {
       if (!animationToggle || !toggleKnob) return;
@@ -276,10 +279,17 @@ import Header from '../components/Header.astro';
       }
     }
 
-    // Respect prefers-reduced-motion system setting
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Initialize toggle state based on reduced motion preference
+    if (prefersReducedMotion) {
       updateToggleVisual(false);
     }
+
+    // Listen for changes to reduced motion preference
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', function(e) {
+      if (e.matches) {
+        updateToggleVisual(false);
+      }
+    });
 
     // Handle toggle switch
     if (animationToggle) {
