@@ -1,0 +1,44 @@
+**READ THIS FIRST. Every session, before any work, read and acknowledge this entire file. If you haven't, you've already failed.**
+
+**Priority order:** This global CLAUDE.md is the baseline. Then read the project-level CLAUDE.md (if one exists in the repo). If the project-level file conflicts with this global file, STOP and tell me: what conflicts, what each file says, and propose options for which to follow. Never silently pick one — I decide.
+
+**After reading this file, your FIRST message to the user must include:**
+1. A confirmation that you have read and understood the CLAUDE.md instructions (global and project-level if applicable).
+2. A list of which superpowers skills you've identified as applicable to the user's request, with a brief reason for each. If none apply, explicitly say "No superpowers skills apply to this request" and explain why.
+
+Do this EVERY session, EVERY first response. No exceptions.
+
+# Global Instructions
+
+## Superpowers Skills -- ALWAYS USE
+
+Before doing ANY work, check which superpowers skills apply and invoke them. This is mandatory, not optional.
+
+- **Every session, before anything else:** invoke `superpowers:using-superpowers`
+- **Before editing or creating skills:** invoke `superpowers:writing-skills`
+- **Before any creative work (new features, adding functionality, modifying behavior):** invoke `superpowers:brainstorming`
+- **Before writing implementation code:** invoke `superpowers:test-driven-development`
+- **Before debugging any bug or test failure:** invoke `superpowers:systematic-debugging`
+- **Before claiming work is complete:** invoke `superpowers:verification-before-completion`
+- **Before writing a multi-step plan:** invoke `superpowers:writing-plans`
+- **Before executing a multi-step plan:** invoke `superpowers:executing-plans`
+- **When executing plans with independent tasks in-session:** invoke `superpowers:subagent-driven-development`
+- **When facing 2+ independent tasks:** invoke `superpowers:dispatching-parallel-agents`
+- **Before starting feature work needing isolation:** invoke `superpowers:using-git-worktrees`
+- **When completing a dev branch:** invoke `superpowers:finishing-a-development-branch`
+- **Before requesting code review or creating PRs:** invoke `superpowers:requesting-code-review`
+- **When receiving code review feedback:** invoke `superpowers:receiving-code-review`
+
+If you skip a superpowers skill that applies, you are doing it wrong. When in doubt, invoke the skill.
+
+**Skills apply to the ENTIRE task lifecycle, not just the start.** Before beginning, think through every phase of the task (research → implementation → verification → commit) and identify which skills apply at each transition. Invoke them proactively at each phase — if the user has to remind you, that is a failure.
+
+## Frontend Design -- ALWAYS USE
+
+- **Before any new frontend/UI work:** invoke `frontend-design:frontend-design`
+- **In existing repos:** NEVER introduce new design conventions, libraries, or patterns. Always follow the project's existing design system, component library, and styling approach. Nothing new -- match what's already there.
+- **Suggest improvements:** If you spot a better convention -- code pattern or visual design -- suggest it to the user before implementing. Don't silently follow a suboptimal pattern; flag it and let the user decide.
+
+## Meta -- About This File
+
+This file is symlinked: `~/.claude/CLAUDE.md` -> `~/indeed/camilo-claude-things/CLAUDE.md`. After editing this file, always offer to commit and push to `git@code.corp.indeed.com:cpires/camilo-claude-things.git`.
