@@ -12,6 +12,8 @@ export default defineConfig({
     })
   ],
   output: 'static',
+  // Astro 7 defaults to 'jsx', which can drop spaces between inline elements
+  compressHTML: true,
   outDir: 'docs',
   site: 'https://camilopires.co.uk',
   base: '/',
