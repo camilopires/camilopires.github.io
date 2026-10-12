@@ -1,11 +1,10 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    tailwind(),
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
@@ -20,6 +19,7 @@ export default defineConfig({
     assets: '_astro'
   },
   vite: {
+    plugins: [tailwindcss()],
     define: {
       'import.meta.env.DEV_MAINTENANCE': JSON.stringify(process.env.DEV_MAINTENANCE)
     },

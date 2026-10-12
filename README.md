@@ -5,7 +5,7 @@ A modern, accessible portfolio website built with Astro, showcasing my work as a
 ## 🚀 Features
 
 ### Core Features
-- **Modern Tech Stack**: Built with Astro 4.x, TypeScript, and Tailwind CSS
+- **Modern Tech Stack**: Built with Astro 5, TypeScript, and Tailwind CSS 4
 - **Accessibility First**: WCAG 2.1 AA compliant with 10/10 accessibility score
 - **Responsive Design**: Mobile-first approach with beautiful UI
 - **Performance Optimized**: Fast loading with optimized assets
@@ -141,7 +141,6 @@ sitemap({
 // astro.config.mjs
 export default defineConfig({
   integrations: [
-    tailwind(),
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
@@ -149,7 +148,10 @@ export default defineConfig({
     })
   ],
   site: 'https://camilopires.co.uk',
-  output: 'static'
+  output: 'static',
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });
 ```
 

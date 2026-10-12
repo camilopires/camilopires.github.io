@@ -1,6 +1,75 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* Classes that might be dynamically generated (was `safelist` in tailwind.config.mjs) */
+@source inline("text-green-500 text-blue-600 text-purple-600 text-gray-900 text-gray-600 text-gray-700 text-white");
+@source inline("bg-white bg-gray-50 bg-blue-600 bg-purple-600 border-white border-2");
+@source inline("hover:bg-gray-100 hover:bg-white hover:text-blue-600 transition-colors");
+@source inline("rounded-lg rounded-full shadow-lg object-cover");
+@source inline("{w,h}-{4,6,8,12,16,20,24,32,40,48,56,64,72,80,96}");
+
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+
+  /* Ensure focus styles are visible: keep the v3 ring defaults */
+  --default-ring-width: 3px;
+  --default-ring-color: #3b82f6;
+
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+}
+
+/*
+  Tailwind v4 compatibility: keep the v3 defaults for border colour and
+  button cursor so everything looks and behaves as before.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+
+  /*
+    Focus outline lives in the base layer so focus:outline-hidden and
+    focus:ring-* utilities can still override it, as they did in v3.
+  */
+  *:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
 
 /* Custom styles */
 html {
@@ -11,15 +80,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-}
-
-*:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-*:focus:not(:focus-visible) {
-  outline: none;
 }
 
 /* Form accessibility styles */
@@ -34,19 +94,6 @@ textarea:invalid:focus,
 select:invalid:focus {
   border-color: #dc2626;
   box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
-}
-
-/* Screen reader only text */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 /* Reduced motion support */

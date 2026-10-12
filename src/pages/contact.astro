@@ -105,7 +105,7 @@ import Header from '../components/Header.astro';
         </div>
 
         <!-- Fun Contact Section -->
-        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-100 relative">
+        <div class="bg-linear-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-100 relative">
           <!-- Animation Toggle -->
           <div class="absolute top-4 right-4 flex items-center gap-2">
             <label for="animation-toggle" class="text-xs text-gray-500 cursor-pointer">Animations</label>
@@ -115,12 +115,12 @@ import Header from '../components/Header.astro';
               id="animation-toggle"
               aria-checked="true"
               aria-label="Toggle animations"
-              class="relative inline-flex h-5 w-9 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 bg-purple-500"
+              class="relative inline-flex h-5 w-9 items-center rounded-full transition-colors focus:outline-hidden focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 bg-purple-500"
             >
               <span class="sr-only">Toggle animations</span>
               <span
                 aria-hidden="true"
-                class="inline-block h-4 w-4 transform rounded-full bg-white shadow-sm transition-transform translate-x-4"
+                class="inline-block h-4 w-4 transform rounded-full bg-white shadow-xs transition-transform translate-x-4"
               ></span>
             </button>
           </div>
@@ -130,7 +130,7 @@ import Header from '../components/Header.astro';
             <!-- Contact Cards -->
             <div class="grid md:grid-cols-3 gap-4">
               <a href="mailto:dev@camilopires.co.uk"
-                 class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-colors border-2 border-transparent hover:border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                 class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-colors border-2 border-transparent hover:border-blue-200 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                  aria-label="Send an email to Camilo Pires">
                 <div class="text-center">
                   <div class="text-4xl mb-3" aria-hidden="true">📧</div>
@@ -142,7 +142,7 @@ import Header from '../components/Header.astro';
               <a href="https://www.linkedin.com/in/camilo-pires"
                  target="_blank"
                  rel="noopener noreferrer"
-                 class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-colors border-2 border-transparent hover:border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                 class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-colors border-2 border-transparent hover:border-blue-200 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                  aria-label="Connect with Camilo Pires on LinkedIn (opens in new tab)">
                 <div class="text-center">
                   <div class="text-4xl mb-3" aria-hidden="true">💼</div>
@@ -154,7 +154,7 @@ import Header from '../components/Header.astro';
               <a href="https://github.com/camilopires"
                  target="_blank"
                  rel="noopener noreferrer"
-                 class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-colors border-2 border-transparent hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                 class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-colors border-2 border-transparent hover:border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                  aria-label="Check out Camilo Pires' GitHub (opens in new tab)">
                 <div class="text-center">
                   <div class="text-4xl mb-3" aria-hidden="true">🛠️</div>
@@ -186,7 +186,7 @@ import Header from '../components/Header.astro';
             <div class="text-center">
               <p class="text-gray-600 mb-4">Ready to create something amazing together?</p>
               <button id="magic-button"
-                 class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+                 class="inline-flex items-center px-6 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors shadow-lg focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
                  aria-label="Click for magic">
                 <span class="mr-2" aria-hidden="true">✨</span>
                 Let's Make Magic Happen!
